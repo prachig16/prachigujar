@@ -18,7 +18,10 @@ h3{
 h1{
     border-right: solid 3px $baseColour;
     overflow: hidden;
-    white-space: nowrap;    
+    white-space: nowrap;
+    .animationColour{
+        color: $secondBaseColour;
+    }    
 }
 
 h2{
@@ -35,18 +38,19 @@ p,
 a{
     font-family: $bodyFont;
     font-size: 2rem;
+    font-weight: 400;
     text-align: center;
     color: $bodyColour;
 }
 
 .logo{
-    color: $baseColour;
+    color: $secondBaseColour;
 }
 
 a:focus,
 a:active{
     color: $secondaryBackground;
-    background-color: $baseColour;
+    background-color: $secondBaseColour;
     box-shadow: 0 0 5px $secondaryBackground;
     opacity: 0.8;
     border-radius: 5px;
@@ -55,9 +59,7 @@ a:active{
     text-align: center;
     font-size: 5rem;
     font-weight: 900;
-    color: $bodyColour;
-    opacity: 0.2;
-    background-color: $primaryBackground;
+    color: $headingBackground;
     font-family: $bodyFont;
     margin-top: -18px;
 }
@@ -68,6 +70,23 @@ a:active{
     top: -40px;
 }
 
+.borderBottom{
+    height: 3px;
+    width: 90px;
+    margin: 20px auto;
+    transition: all 0.5s;
+    background-color: $baseColour;
+    text-align: center;
+}
+
+.skillTitle i{
+    font-size: 4rem;
+    color: $secondaryBackground;
+    &:focus,
+    &:active{
+        color: $baseColour;
+    }
+}
 
 @media only screen and (min-width: 768px){
     h1{
@@ -89,8 +108,16 @@ a:active{
 
     a:hover{
         color: $secondaryBackground;
-        background-color: $baseColour;
+        background-color: $secondBaseColour;
         opacity: 0.8;
         border-radius: 5px;
+    }
+
+    .borderBottom:hover{
+        width: 120px;
+    }
+
+    .skillTitle i:hover{
+        color: $baseColour;
     }
 }

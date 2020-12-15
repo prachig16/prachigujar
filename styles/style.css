@@ -269,13 +269,17 @@ h3 {
 }
 
 .baseColour {
-  color: #275c80;
+  color: #0cc0de;
 }
 
 h1 {
-  border-right: solid 3px #275c80;
+  border-right: solid 3px #0cc0de;
   overflow: hidden;
   white-space: nowrap;
+}
+
+h1 .animationColour {
+  color: #275c80;
 }
 
 h2 {
@@ -292,6 +296,7 @@ p,
 a {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
+  font-weight: 400;
   text-align: center;
   color: rgba(52, 53, 57, 0.9);
 }
@@ -314,9 +319,7 @@ a:active {
   text-align: center;
   font-size: 5rem;
   font-weight: 900;
-  color: rgba(52, 53, 57, 0.9);
-  opacity: 0.2;
-  background-color: #fafafa;
+  color: rgba(250, 250, 250, 0.1);
   font-family: "Poppins", sans-serif;
   margin-top: -18px;
 }
@@ -325,6 +328,25 @@ a:active {
   text-align: center;
   position: relative;
   top: -40px;
+}
+
+.borderBottom {
+  height: 3px;
+  width: 90px;
+  margin: 20px auto;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #0cc0de;
+  text-align: center;
+}
+
+.skillTitle i {
+  font-size: 4rem;
+  color: #e3e5d2;
+}
+
+.skillTitle i:focus, .skillTitle i:active {
+  color: #0cc0de;
 }
 
 @media only screen and (min-width: 768px) {
@@ -348,6 +370,12 @@ a:active {
     background-color: #275c80;
     opacity: 0.8;
     border-radius: 5px;
+  }
+  .borderBottom:hover {
+    width: 120px;
+  }
+  .skillTitle i:hover {
+    color: #0cc0de;
   }
 }
 
@@ -541,7 +569,7 @@ input[type="checkbox"]:checked + .slidingMenu {
 
 .slidingMenu a:focus,
 .slidingMenu a:active {
-  color: #275c80;
+  color: #0cc0de;
   border-bottom: 1px solid #275c80;
 }
 
@@ -565,8 +593,13 @@ label {
   }
 }
 
-section {
-  padding: 5rem 0 5rem;
+main {
+  background-color: #0f0f0f;
+  padding-top: 80px;
+}
+
+main .aboutContainer {
+  padding: 5rem 0;
 }
 
 .infoContainer {
@@ -598,6 +631,7 @@ section {
 .infoContainer .aboutMe p {
   text-align: left;
   padding: 0 20px 20px 20px;
+  color: rgba(237, 239, 224, 0.5);
 }
 
 @media only screen and (min-width: 992px) {
@@ -608,6 +642,68 @@ section {
   .infoContainer .aboutMe {
     margin: 0 0 0 30px;
     width: calc((100% - 30px) / 2);
+  }
+}
+
+.skillsContainer {
+  padding: 5rem 0;
+  margin: 50px 0;
+}
+
+.skillsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skillsList .skillTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc((100% - 20px) / 2);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 20px 20px 0;
+}
+
+.skillsList .skillTitle:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.skillsList .skillTitle p {
+  padding: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .skillsList .skillTitle {
+    width: calc((100% - 40px) / 3);
+    margin: 20px 20px 20px 0;
+  }
+  .skillsList .skillTitle:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .skillsList .skillTitle {
+    width: calc((100% - 60px) / 4);
+    margin: 20px 20px 20px 0;
+  }
+  .skillsList .skillTitle:nth-of-type(4n) {
+    margin-right: 0;
   }
 }
 

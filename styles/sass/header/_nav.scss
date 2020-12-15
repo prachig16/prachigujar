@@ -48,13 +48,13 @@ input[type="checkbox"]:checked + .slidingMenu {
 .slidingMenu a:focus,
 .slidingMenu a:active{
     color: $baseColour;
-    border-bottom: 1px solid $baseColour;
+    border-bottom: 1px solid $secondBaseColour;
 } 
 
 label {
     position: fixed;
     z-index: 2;
-    color: $baseColour;
+    color: $secondBaseColour;
     font-size: 3rem;
     top: 20px;
     right: 20px;

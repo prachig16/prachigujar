@@ -1,7 +1,10 @@
-section{
-    padding: 5rem 0 5rem;
+main{
+    background-color: $sectionBackground;
+    padding-top: 80px;
+    .aboutContainer{
+        padding: 5rem 0;
+    }
 }
-
 
 .infoContainer{
     display: flex;
@@ -18,6 +21,7 @@ section{
         p{
             text-align: left;
             padding: 0 20px 20px 20px;
+            color: $headerBackground;
         }
     }
 }
