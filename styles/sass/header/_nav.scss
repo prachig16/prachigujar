@@ -9,6 +9,10 @@
 .topNav li a{
     padding: 5px 10px;
     margin: 0px 5px;
+    color: $bodyColour;
+    &:hover{
+        color: $secondaryBackground;
+    }
 }
 
 // SLIDING menu for tablet and mobile version
@@ -41,6 +45,7 @@ input[type="checkbox"]:checked + .slidingMenu {
 .slidingMenu a{
     display: inline-block;
     transition: color 0.3s ease;
+    color: $bodyColour;
     padding: 20px;
     width: 100%;
 }

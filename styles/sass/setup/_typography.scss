@@ -2,7 +2,8 @@
 
 h1,
 h2,
-h3{
+h3,
+h4{
     font-family: $headingFont;
     font-size: 2.5rem;
     font-weight: 500;
@@ -30,17 +31,30 @@ h2{
     font-family: $headingFont;
 }
 
-h3{
-    font-size: 2rem;
+h3,
+h4{
+    font-size: 2.2rem;
+    width: max-content;
+}
+
+h4{
+    color: $secondaryBackground;
+    font-weight: 500;
+    margin: 0;
 }
 
 p,
 a{
     font-family: $bodyFont;
-    font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.5;
     font-weight: 400;
     text-align: center;
-    color: $bodyColour;
+    color: $headerBackground;
+}
+footer p{
+    font-family: $headingFont;
+    line-height: 1.2;
 }
 
 .logo{
@@ -79,13 +93,18 @@ a:active{
     text-align: center;
 }
 
-.skillTitle i{
-    font-size: 4rem;
+.skillTitle{
+    font-size: 5rem;
     color: $secondaryBackground;
     &:focus,
     &:active{
         color: $baseColour;
     }
+}
+
+.skillsList .skillTitle p{
+    font-size: 1.75rem;
+    color: $headerBackground;
 }
 
 @media only screen and (min-width: 768px){
@@ -95,6 +114,10 @@ a:active{
     h3{
         font-size: 2.5rem;
     }
+    p,
+    a{
+        font-size: 2rem;
+    }
 }
 
 
@@ -103,6 +126,9 @@ a:active{
         font-size: 4rem;
     }
     h3{
+        font-size: 3.5rem;
+    }
+    h4{
         font-size: 3.5rem;
     }
 
@@ -117,7 +143,7 @@ a:active{
         width: 120px;
     }
 
-    .skillTitle i:hover{
+    .skillTitle:hover{
         color: $baseColour;
     }
 }

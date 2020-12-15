@@ -1,12 +1,16 @@
 .skillsContainer{
     padding: 5rem 0;
-    margin: 50px 0;
+    // margin: 50px 0;
 }
 
 .skillsList{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: $headingBackground;
+    border-radius: 50px;
+    box-shadow: 0 0 5px $headerBackground;
+    padding: 30px;
     .skillTitle{
         display: flex;
         flex-direction: column;

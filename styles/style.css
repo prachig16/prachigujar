@@ -205,6 +205,7 @@ template {
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -257,7 +258,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Raleway", sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
@@ -288,17 +290,33 @@ h2 {
   font-family: "Raleway", sans-serif;
 }
 
-h3 {
-  font-size: 2rem;
+h3,
+h4 {
+  font-size: 2.2rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+h4 {
+  color: #e3e5d2;
+  font-weight: 500;
+  margin: 0;
 }
 
 p,
 a {
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
+  line-height: 1.5;
   font-weight: 400;
   text-align: center;
-  color: rgba(52, 53, 57, 0.9);
+  color: rgba(237, 239, 224, 0.5);
+}
+
+footer p {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.2;
 }
 
 .logo {
@@ -340,13 +358,18 @@ a:active {
   text-align: center;
 }
 
-.skillTitle i {
-  font-size: 4rem;
+.skillTitle {
+  font-size: 5rem;
   color: #e3e5d2;
 }
 
-.skillTitle i:focus, .skillTitle i:active {
+.skillTitle:focus, .skillTitle:active {
   color: #0cc0de;
+}
+
+.skillsList .skillTitle p {
+  font-size: 1.75rem;
+  color: rgba(237, 239, 224, 0.5);
 }
 
 @media only screen and (min-width: 768px) {
@@ -356,6 +379,10 @@ a:active {
   h3 {
     font-size: 2.5rem;
   }
+  p,
+  a {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -363,6 +390,9 @@ a:active {
     font-size: 4rem;
   }
   h3 {
+    font-size: 3.5rem;
+  }
+  h4 {
     font-size: 3.5rem;
   }
   a:hover {
@@ -374,7 +404,7 @@ a:active {
   .borderBottom:hover {
     width: 120px;
   }
-  .skillTitle i:hover {
+  .skillTitle:hover {
     color: #0cc0de;
   }
 }
@@ -420,6 +450,37 @@ h1 {
   }
 }
 
+.onScroll {
+  -webkit-animation: fadeIn 1s ease-in;
+          animation: fadeIn 1s ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   @-webkit-keyframes animated-heading {
     from {
@@ -456,6 +517,10 @@ h1 {
       width: 375px;
     }
   }
+}
+
+body {
+  background-color: #0f0f0f;
 }
 
 header {
@@ -527,6 +592,11 @@ header .introContainer {
 .topNav li a {
   padding: 5px 10px;
   margin: 0px 5px;
+  color: rgba(52, 53, 57, 0.9);
+}
+
+.topNav li a:hover {
+  color: #e3e5d2;
 }
 
 .slidingMenuToggle {
@@ -563,6 +633,7 @@ input[type="checkbox"]:checked + .slidingMenu {
   display: inline-block;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  color: rgba(52, 53, 57, 0.9);
   padding: 20px;
   width: 100%;
 }
@@ -594,12 +665,11 @@ label {
 }
 
 main {
-  background-color: #0f0f0f;
   padding-top: 80px;
 }
 
 main .aboutContainer {
-  padding: 5rem 0;
+  padding: 5rem 0 0 0;
 }
 
 .infoContainer {
@@ -647,7 +717,6 @@ main .aboutContainer {
 
 .skillsContainer {
   padding: 5rem 0;
-  margin: 50px 0;
 }
 
 .skillsList {
@@ -659,6 +728,11 @@ main .aboutContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: rgba(250, 250, 250, 0.1);
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 5px rgba(237, 239, 224, 0.5);
+          box-shadow: 0 0 5px rgba(237, 239, 224, 0.5);
+  padding: 30px;
 }
 
 .skillsList .skillTitle {
@@ -707,8 +781,119 @@ main .aboutContainer {
   }
 }
 
+.projectsContainer .heading {
+  margin: 5% 0 15%;
+}
+
+.project {
+  background-color: rgba(250, 250, 250, 0.1);
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 5px rgba(237, 239, 224, 0.5);
+          box-shadow: 0 0 5px rgba(237, 239, 224, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  padding: 30px 0;
+  margin: 0 0 25% 0;
+}
+
+.project figure {
+  position: absolute;
+  top: -25%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.project .projectInfo {
+  padding: 10px 50px 20px;
+  text-align: left;
+  margin: 25% auto 0;
+}
+
+.project .projectInfo p {
+  text-align: left;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.project .projectInfo p .madeWith {
+  position: relative;
+  color: #e3e5d2;
+  z-index: 0;
+  margin-right: 5px;
+}
+
+.project .projectInfo p .madeWith::after {
+  content: '';
+  background: #0cc0de;
+  position: absolute;
+  display: block;
+  height: 50%;
+  width: 98%;
+  top: 50%;
+  left: -2%;
+  opacity: .2;
+  z-index: -1;
+}
+
+.project .projectInfo a {
+  text-transform: uppercase;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(250, 250, 250, 0.1);
+          box-shadow: 0 0 5px rgba(250, 250, 250, 0.1);
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  margin: 10px 20px 0 0;
+}
+
+.project .projectInfo a:active, .project .projectInfo a:focus {
+  color: #0cc0de;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .projectInfo {
+    margin-top: 30%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .project .projectInfo {
+    margin-top: 32%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .projectsContainer .heading {
+    margin: 5% 0;
+  }
+  .project {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 50px auto;
+  }
+  .project figure {
+    position: static;
+  }
+  .project .projectInfo {
+    margin-top: 0;
+  }
+  .project .projectInfo a:hover {
+    color: #0cc0de;
+  }
+  .projectTwo,
+  .projectFour {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
 footer {
-  background-color: rgba(237, 239, 224, 0.5);
   padding: 10px;
   text-transform: uppercase;
 }
