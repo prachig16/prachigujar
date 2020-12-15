@@ -1,0 +1,45 @@
+header{
+    min-height: 100vh;
+    background-image: url(../assets/headerImage.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 20px 0;
+    .topContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+    .introContainer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $headerBackground;
+        border-radius: 20px;
+        box-shadow: 0 0 5px $baseColour;
+        padding: 50px;
+        width: 315px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header .introContainer{
+        width: 395px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header .introContainer{
+        width: 475px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header .introContainer{
+        padding: 50px 100px;
+        width: 575px;
+    }
+}

@@ -1,0 +1,35 @@
+section{
+    padding: 5rem 0 5rem;
+}
+
+
+.infoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    figure{
+        margin: 0 auto 20px;
+    }    
+    .aboutMe{
+        padding: 10px;
+        p{
+            text-align: left;
+            padding: 0 20px 20px 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .infoContainer{
+        flex-wrap: nowrap;
+        .aboutMe{
+            margin: 0 0 0 30px;
+            width: calc((100% - 30px) / 2);
+        }
+    }
+}
+
+

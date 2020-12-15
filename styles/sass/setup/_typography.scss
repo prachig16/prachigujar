@@ -1,0 +1,96 @@
+// Setting heading styles.....
+
+h1,
+h2,
+h3{
+    font-family: $headingFont;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: $primaryHeading;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.baseColour{
+    color: $baseColour;
+}
+h1{
+    border-right: solid 3px $baseColour;
+    overflow: hidden;
+    white-space: nowrap;    
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: $headingFont;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+p,
+a{
+    font-family: $bodyFont;
+    font-size: 2rem;
+    text-align: center;
+    color: $bodyColour;
+}
+
+.logo{
+    color: $baseColour;
+}
+
+a:focus,
+a:active{
+    color: $secondaryBackground;
+    background-color: $baseColour;
+    box-shadow: 0 0 5px $secondaryBackground;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+.headingBackground{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+    color: $bodyColour;
+    opacity: 0.2;
+    background-color: $primaryBackground;
+    font-family: $bodyFont;
+    margin-top: -18px;
+}
+
+.headingContent{
+    text-align: center;
+    position: relative;
+    top: -40px;
+}
+
+
+@media only screen and (min-width: 768px){
+    h1{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+}
+
+
+@media only screen and (min-width: 992px){
+    h1{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 3.5rem;
+    }
+
+    a:hover{
+        color: $secondaryBackground;
+        background-color: $baseColour;
+        opacity: 0.8;
+        border-radius: 5px;
+    }
+}

@@ -1,5 +1,8 @@
-@import 'setup';
-@import 'utils';
-@import 'typography';
-@import 'header';
-@import 'footer';
+@import 'setup/setup';
+@import 'setup/utils';
+@import 'setup/typography';
+@import 'header/animations';
+@import 'header/header';
+@import 'header/nav';
+@import 'main/about';
+@import 'footer/footer';

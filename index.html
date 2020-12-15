@@ -6,24 +6,95 @@
     <title>Prachi Gujar</title>
     <!-- Linking the Font family, Awesome font library and style sheet -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ace8ce037f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <h1>Hi I am Prachi Gujar</h1>
-        </div>
+        <section class="topContainer wrapper">
+            <p class="logo">PG</p>
+            <nav>
+                <ul class="topNav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Sliding nav for Mobile version -->
+            <nav class="slidingMenuToggle">
+                <label for="slidingBar"><i class="fa fa-bars"></i></label>
+                <input type="checkbox" id="slidingBar" name="toggle" />
+                <ul class="slidingMenu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <section class="introContainer wrapper">
+            <h3>I'M Prachi Gujar</h1>
+            <h1><span class="baseColour">A</span> Front-End Developer.</h1>
+        </section>
     </header>
 
     <main>
-        
+        <div class="wrapper">
+            <section class="aboutSection" id="about">
+                <div class="heading">
+                    <div class="headingBackground">
+                        <span>About Me</span>
+                    </div>
+                    <div class="headingContent">
+                        <h2 class="baseColour">About Me</h2>
+                    </div>
+                </div>
+                <div class="infoContainer">
+                    <figure><img src="https://via.placeholder.com/500" alt="headshot of "></figure>
+                    <div class="aboutMe">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, velit. Laudantium, iure sint architecto eaque reiciendis incidunt velit quod dolores.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, iste explicabo suscipit hic aspernatur natus eaque quibusdam molestiae neque incidunt!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, eveniet.</p>
+                    </div>
+                </div>
+            
+            </section>
+            
+            <section id="skills">
+                <div class="headingBackground">
+                    <span>Skills</span>
+                </div>
+                <div class="headingContent">
+                    <h2 class="baseColour">Skills</h2>
+                </div>
+            </section>
+            
+            <section id="projects">
+                <div class="headingBackground">
+                    <span>Current Projects</span>
+                </div>
+                <div class="headingContent">
+                    <h2 class="baseColour">Current Projects</h2>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <div class="headingBackground">
+                    <span>Contact</span>
+                </div>
+                <div class="headingContent">
+                    <h2 class="baseColour">Contact</h2>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p class="wrapper"> Copyright <i class="far fa-copyright"></i> 2019 HackerYou | <a href="https://junocollege.com/">Created at Juno College of Technology</a>
-        </p>
+        <p class="wrapper">Designed by Prachi Gujar 2020</p>
     </footer>
 
     <!--Loading jQuery library and linking the script file  -->

@@ -1,0 +1,32 @@
+//Animation
+h1 {
+    animation: animated-heading 2.5s steps(29,end) 1s 1 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+// Heading animation
+@keyframes animated-heading{
+  from{width: 0;}
+  to{width: 215px;}
+}
+
+// Cursor Animation
+@keyframes animated-cursor{
+  from{border-right-color: $baseColour;}
+  to{border-right-color: transparent;}
+}
+
+
+// Media Query...
+@media only screen and (min-width: 768px) {
+    @keyframes animated-heading{
+        from{width: 0;}
+        to{width: 295px;}
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    @keyframes animated-heading{
+        from{width: 0;}
+        to{width: 375px;}
+    }
+}
