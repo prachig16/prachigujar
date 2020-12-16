@@ -24,25 +24,24 @@ header{
         border-radius: 20px;
         box-shadow: 0 0 5px $secondBaseColour;
         padding: 50px;
-        width: 315px;
+        width: 349px;
     }
 }
 
 @media only screen and (min-width: 768px) {
     header .introContainer{
-        width: 395px;
+        width: 373px;
     }
 }
 
 @media only screen and (min-width: 992px) {
     header .introContainer{
-        width: 475px;
+        width: 595px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     header .introContainer{
         padding: 50px 100px;
-        width: 575px;
     }
 }

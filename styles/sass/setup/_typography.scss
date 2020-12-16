@@ -19,10 +19,11 @@ h4{
 h1{
     border-right: solid 3px $baseColour;
     overflow: hidden;
-    white-space: nowrap;
-    .animationColour{
-        color: $secondBaseColour;
-    }    
+    white-space: nowrap;    
+}
+
+.animationColour{
+    color: $secondBaseColour;
 }
 
 h2{
@@ -44,7 +45,11 @@ h4{
 }
 
 p,
-a{
+a,
+input[type="text"],
+input[type="email"],
+textarea,
+.submit{
     font-family: $bodyFont;
     font-size: 1.75rem;
     line-height: 1.5;
@@ -71,7 +76,7 @@ a:active{
 }
 .headingBackground{
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900;
     color: $headingBackground;
     font-family: $bodyFont;
@@ -107,6 +112,26 @@ a:active{
     color: $headerBackground;
 }
 
+// Buttons for projects and submit form
+.project .projectInfo a,
+.submit{
+    text-transform: uppercase;
+    background-color: $sectionBackground;
+    border-radius: 10px;
+    box-shadow: 0 0 5px $headingBackground;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    margin: 0;
+    &:active,
+    &:focus{
+        color: $baseColour;
+    }
+}
+.submit{
+    border: 2px solid $baseColour;
+    box-shadow: 0 0 5px $baseColour;   
+}
+
 @media only screen and (min-width: 768px){
     h1{
         font-size: 3.5rem;
@@ -117,6 +142,9 @@ a:active{
     p,
     a{
         font-size: 2rem;
+    }
+    .headingBackground{
+        font-size: 5rem;
     }
 }
 
@@ -131,19 +159,26 @@ a:active{
     h4{
         font-size: 3.5rem;
     }
+}
 
+
+@media only screen and (min-width: 1200px){
     a:hover{
         color: $secondaryBackground;
         background-color: $secondBaseColour;
         opacity: 0.8;
         border-radius: 5px;
     }
-
     .borderBottom:hover{
         width: 120px;
     }
 
-    .skillTitle:hover{
+    .skillTitle:hover,
+    .project .projectInfo a:hover,
+    .submit:hover{
         color: $baseColour;
+    }
+    .submit:hover{
+        background-color: $headingBackground;
     }
 }

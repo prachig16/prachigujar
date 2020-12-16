@@ -20,7 +20,8 @@
 .slidingMenuToggle{
     padding-top: 20px;
     .slidingMenu {
-        background: $headerBackground;
+        background-color: $bodyColour;
+        // background: $headerBackground;
         overflow: hidden;
         position: fixed;
         right: 0;
@@ -45,7 +46,8 @@ input[type="checkbox"]:checked + .slidingMenu {
 .slidingMenu a{
     display: inline-block;
     transition: color 0.3s ease;
-    color: $bodyColour;
+    color: $headerBackground;
+    // color: $bodyColour;
     padding: 20px;
     width: 100%;
 }
@@ -59,7 +61,7 @@ input[type="checkbox"]:checked + .slidingMenu {
 label {
     position: fixed;
     z-index: 2;
-    color: $secondBaseColour;
+    color: $baseColour;
     font-size: 3rem;
     top: 20px;
     right: 20px;

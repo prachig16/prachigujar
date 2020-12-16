@@ -280,7 +280,7 @@ h1 {
   white-space: nowrap;
 }
 
-h1 .animationColour {
+.animationColour {
   color: #275c80;
 }
 
@@ -305,7 +305,11 @@ h4 {
 }
 
 p,
-a {
+a,
+input[type="text"],
+input[type="email"],
+textarea,
+.submit {
   font-family: "Poppins", sans-serif;
   font-size: 1.75rem;
   line-height: 1.5;
@@ -335,7 +339,7 @@ a:active {
 
 .headingBackground {
   text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
   color: rgba(250, 250, 250, 0.1);
   font-family: "Poppins", sans-serif;
@@ -372,6 +376,30 @@ a:active {
   color: rgba(237, 239, 224, 0.5);
 }
 
+.project .projectInfo a,
+.submit {
+  text-transform: uppercase;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(250, 250, 250, 0.1);
+          box-shadow: 0 0 5px rgba(250, 250, 250, 0.1);
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.project .projectInfo a:active, .project .projectInfo a:focus,
+.submit:active,
+.submit:focus {
+  color: #0cc0de;
+}
+
+.submit {
+  border: 2px solid #0cc0de;
+  -webkit-box-shadow: 0 0 5px #0cc0de;
+          box-shadow: 0 0 5px #0cc0de;
+}
+
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 3.5rem;
@@ -382,6 +410,9 @@ a:active {
   p,
   a {
     font-size: 2rem;
+  }
+  .headingBackground {
+    font-size: 5rem;
   }
 }
 
@@ -395,6 +426,9 @@ a:active {
   h4 {
     font-size: 3.5rem;
   }
+}
+
+@media only screen and (min-width: 1200px) {
   a:hover {
     color: #e3e5d2;
     background-color: #275c80;
@@ -404,8 +438,13 @@ a:active {
   .borderBottom:hover {
     width: 120px;
   }
-  .skillTitle:hover {
+  .skillTitle:hover,
+  .project .projectInfo a:hover,
+  .submit:hover {
     color: #0cc0de;
+  }
+  .submit:hover {
+    background-color: rgba(250, 250, 250, 0.1);
   }
 }
 
@@ -419,7 +458,7 @@ h1 {
     width: 0;
   }
   to {
-    width: 215px;
+    width: 196px;
   }
 }
 
@@ -428,7 +467,7 @@ h1 {
     width: 0;
   }
   to {
-    width: 215px;
+    width: 196px;
   }
 }
 
@@ -450,12 +489,17 @@ h1 {
   }
 }
 
-.onScroll {
-  -webkit-animation: fadeIn 1s ease-in;
-          animation: fadeIn 1s ease-in;
+.onScrollLeft {
+  -webkit-animation: fadeInLeft 1s ease-in;
+          animation: fadeInLeft 1s ease-in;
 }
 
-@-webkit-keyframes fadeIn {
+.onScrollRight {
+  -webkit-animation: fadeInRight 1s ease-in;
+          animation: fadeInRight 1s ease-in;
+}
+
+@-webkit-keyframes fadeInLeft {
   0% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
@@ -468,10 +512,36 @@ h1 {
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInLeft {
   0% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     opacity: 0;
   }
   100% {
@@ -487,7 +557,7 @@ h1 {
       width: 0;
     }
     to {
-      width: 295px;
+      width: 273px;
     }
   }
   @keyframes animated-heading {
@@ -495,7 +565,7 @@ h1 {
       width: 0;
     }
     to {
-      width: 295px;
+      width: 273px;
     }
   }
 }
@@ -506,7 +576,7 @@ h1 {
       width: 0;
     }
     to {
-      width: 375px;
+      width: 309px;
     }
   }
   @keyframes animated-heading {
@@ -514,7 +584,7 @@ h1 {
       width: 0;
     }
     to {
-      width: 375px;
+      width: 309px;
     }
   }
 }
@@ -557,25 +627,24 @@ header .introContainer {
   -webkit-box-shadow: 0 0 5px #275c80;
           box-shadow: 0 0 5px #275c80;
   padding: 50px;
-  width: 315px;
+  width: 349px;
 }
 
 @media only screen and (min-width: 768px) {
   header .introContainer {
-    width: 395px;
+    width: 373px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   header .introContainer {
-    width: 475px;
+    width: 595px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   header .introContainer {
     padding: 50px 100px;
-    width: 575px;
   }
 }
 
@@ -604,7 +673,7 @@ header .introContainer {
 }
 
 .slidingMenuToggle .slidingMenu {
-  background: rgba(237, 239, 224, 0.5);
+  background-color: rgba(52, 53, 57, 0.9);
   overflow: hidden;
   position: fixed;
   right: 0;
@@ -633,7 +702,7 @@ input[type="checkbox"]:checked + .slidingMenu {
   display: inline-block;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
-  color: rgba(52, 53, 57, 0.9);
+  color: rgba(237, 239, 224, 0.5);
   padding: 20px;
   width: 100%;
 }
@@ -647,7 +716,7 @@ input[type="checkbox"]:checked + .slidingMenu {
 label {
   position: fixed;
   z-index: 2;
-  color: #275c80;
+  color: #0cc0de;
   font-size: 3rem;
   top: 20px;
   right: 20px;
@@ -800,15 +869,19 @@ main .aboutContainer {
   margin: 0 0 25% 0;
 }
 
+.project:last-of-type {
+  margin: 0 0 10% 0;
+}
+
 .project figure {
   position: absolute;
-  top: -25%;
+  top: -10%;
   padding: 20px;
   margin: 0 auto;
 }
 
 .project .projectInfo {
-  padding: 10px 50px 20px;
+  padding: 20px 50px;
   text-align: left;
   margin: 25% auto 0;
 }
@@ -839,24 +912,42 @@ main .aboutContainer {
   z-index: -1;
 }
 
-.project .projectInfo a {
-  text-transform: uppercase;
-  background-color: #0f0f0f;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 5px rgba(250, 250, 250, 0.1);
-          box-shadow: 0 0 5px rgba(250, 250, 250, 0.1);
-  letter-spacing: 2px;
-  padding: 10px 20px;
-  margin: 10px 20px 0 0;
+@media only screen and (min-width: 376px) {
+  .project figure {
+    top: -15%;
+  }
+  .project .projectInfo {
+    margin-top: 20%;
+  }
 }
 
-.project .projectInfo a:active, .project .projectInfo a:focus {
-  color: #0cc0de;
+@media only screen and (min-width: 470px) {
+  .project figure {
+    top: -25%;
+  }
+  .project .projectInfo {
+    margin-top: 20%;
+  }
+  .project .projectInfo a {
+    margin: 10px 20px 0 0;
+  }
+}
+
+@media only screen and (min-width: 470px) {
+  .project .projectInfo {
+    margin-top: 25%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .project .projectInfo {
-    margin-top: 30%;
+  .project {
+    margin: 10% 10% 25% 10%;
+  }
+  .project:last-of-type {
+    margin: 10%;
+  }
+  .project figure {
+    padding: 20px 50px;
   }
 }
 
@@ -870,19 +961,23 @@ main .aboutContainer {
   .projectsContainer .heading {
     margin: 5% 0;
   }
-  .project {
+  .project,
+  .project:last-of-type {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 50px auto;
   }
-  .project figure {
+  .project figure,
+  .project:last-of-type figure {
     position: static;
+    padding: 0;
   }
-  .project .projectInfo {
+  .project .projectInfo,
+  .project:last-of-type .projectInfo {
     margin-top: 0;
-  }
-  .project .projectInfo a:hover {
-    color: #0cc0de;
   }
   .projectTwo,
   .projectFour {
@@ -893,7 +988,84 @@ main .aboutContainer {
   }
 }
 
+.contactContainer {
+  margin-top: 15%;
+}
+
+.contactFormContainer {
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactFormContainer p {
+  text-align: left;
+}
+
+.formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input[type="text"],
+input[type="email"] {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  border-bottom: 2px solid #0cc0de;
+  padding: 20px 5px;
+}
+
+input[type="text"] {
+  margin: 0;
+  margin-right: 20px;
+  width: calc(50% - 20px);
+}
+
+input[type="email"] {
+  margin: 0;
+  margin-left: 20px;
+  width: calc(50% - 20px);
+}
+
+textarea[id="message"] {
+  background-color: transparent;
+  text-align: left;
+  border: 2px solid #0cc0de;
+  padding: 10px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.submit {
+  padding: 15px 30px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .contactContainer {
+    margin-top: 5%;
+  }
+  .contactFormContainer {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+}
+
 footer {
   padding: 10px;
   text-transform: uppercase;
+  background-color: rgba(250, 250, 250, 0.1);
+}
+
+footer i {
+  color: #0cc0de;
 }

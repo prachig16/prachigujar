@@ -2,16 +2,16 @@
       $(window).scroll(function () {
           let wh = $(window).height() - 100;
           if ($(window).scrollTop() > $('.projectOne').offset().top - wh) {
-              $('.projectOne').addClass('onScroll');
+              $('.projectOne').addClass('onScrollLeft');
           }
           if ($(window).scrollTop() > $('.projectTwo').offset().top - wh) {
-              $('.projectTwo').addClass('onScroll');
+              $('.projectTwo').addClass('onScrollRight');
           }
           if ($(window).scrollTop() > $('.projectThree').offset().top - wh) {
-              $('.projectThree').addClass('onScroll');
+              $('.projectThree').addClass('onScrollLeft');
           }
           if ($(window).scrollTop() > $('.projectFour').offset().top - wh) {
-              $('.projectFour').addClass('onScroll');
+              $('.projectFour').addClass('onScrollRight');
           }
       })
   });
