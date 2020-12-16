@@ -761,6 +761,7 @@ main .aboutContainer {
 
 .infoContainer figure {
   margin: 0 auto 20px;
+  width: 500px;
 }
 
 .infoContainer .aboutMe {
