@@ -5,12 +5,8 @@ h1 {
 
 // Heading animation
 @keyframes animatedHeading{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 196px;
-    }
+    from{width: 0;}
+    to{width: 196px;}
 }
 
 // Cursor Animation
@@ -61,6 +57,6 @@ h1 {
 @media only screen and (min-width: 992px) {
     @keyframes animated-heading{
         from{width: 0;}
-        to{width: 309px;}
+        to{width: 311px;}
     }
 }
