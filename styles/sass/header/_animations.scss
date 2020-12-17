@@ -48,14 +48,14 @@ h1 {
 
 // Media Query for heading animation...
 @media only screen and (min-width: 768px) {
-    @keyframes animated-heading{
+    @keyframes animatedHeading{
         from{width: 0;}
         to{width: 273px;}
     }
 }
 
 @media only screen and (min-width: 992px) {
-    @keyframes animated-heading{
+    @keyframes animatedHeading{
         from{width: 0;}
         to{width: 311px;}
     }
