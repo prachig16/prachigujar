@@ -454,19 +454,19 @@ h1 {
 }
 
 @-webkit-keyframes animatedHeading {
-  0% {
+  from {
     width: 0;
   }
-  100% {
+  to {
     width: 196px;
   }
 }
 
 @keyframes animatedHeading {
-  0% {
+  from {
     width: 0;
   }
-  100% {
+  to {
     width: 196px;
   }
 }
@@ -552,7 +552,7 @@ h1 {
 }
 
 @media only screen and (min-width: 768px) {
-  @-webkit-keyframes animated-heading {
+  @-webkit-keyframes animatedHeading {
     from {
       width: 0;
     }
@@ -560,7 +560,7 @@ h1 {
       width: 273px;
     }
   }
-  @keyframes animated-heading {
+  @keyframes animatedHeading {
     from {
       width: 0;
     }
@@ -571,20 +571,20 @@ h1 {
 }
 
 @media only screen and (min-width: 992px) {
-  @-webkit-keyframes animated-heading {
+  @-webkit-keyframes animatedHeading {
     from {
       width: 0;
     }
     to {
-      width: 309px;
+      width: 311px;
     }
   }
-  @keyframes animated-heading {
+  @keyframes animatedHeading {
     from {
       width: 0;
     }
     to {
-      width: 309px;
+      width: 311px;
     }
   }
 }
