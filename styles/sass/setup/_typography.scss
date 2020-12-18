@@ -59,10 +59,6 @@ textarea,
     color: $headerBackground;
 }
 
-footer p{
-    font-family: $headingFont;
-    line-height: 1.2;
-}
 
 .logo{
     color: $secondBaseColour;
@@ -76,6 +72,7 @@ a:active{
     opacity: 0.8;
     border-radius: 5px;
 }
+
 .headingBackground{
     text-align: center;
     font-size: 4rem;
@@ -100,6 +97,14 @@ a:active{
     text-align: center;
 }
 
+// About Section Typo.....
+.aboutMe p{
+    text-align: left;
+    color: $secondaryBackground;
+}
+
+
+// Skill Section Typo........
 .skillTitle{
     font-size: 5rem;
     color: $secondaryBackground;
@@ -168,6 +173,12 @@ a:active{
         }
     }
 } 
+
+// Footer....
+footer p{
+    font-family: $headingFont;
+    line-height: 1.2;
+}
  
 
 @media only screen and (min-width: 768px){

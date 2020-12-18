@@ -318,11 +318,6 @@ textarea,
   color: rgba(237, 239, 224, 0.5);
 }
 
-footer p {
-  font-family: "Raleway", sans-serif;
-  line-height: 1.2;
-}
-
 .logo {
   color: #275c80;
 }
@@ -360,6 +355,11 @@ a:active {
   transition: all 0.5s;
   background-color: #0cc0de;
   text-align: center;
+}
+
+.aboutMe p {
+  text-align: left;
+  color: #e3e5d2;
 }
 
 .skillTitle {
@@ -438,6 +438,11 @@ a:active {
 .socialNav li a i {
   font-size: 2.5rem;
   padding: 10px;
+}
+
+footer p {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 768px) {
@@ -920,9 +925,7 @@ main .aboutContainer {
 }
 
 .infoContainer .aboutMe p {
-  text-align: left;
   padding: 0 20px 20px 20px;
-  color: rgba(237, 239, 224, 0.5);
 }
 
 @media only screen and (min-width: 992px) {
