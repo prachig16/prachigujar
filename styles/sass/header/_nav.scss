@@ -21,12 +21,12 @@
     padding-top: 20px;
     .slidingMenu {
         background-color: $bodyColour;
-        // background: $headerBackground;
         overflow: hidden;
         position: fixed;
         right: 0;
         top: -100%;
-        transition: all 0.5s ease-in;
+        z-index: 2;
+        transition: all 0.7s linear;
         height: auto;
         width: 100%;
         li{
@@ -35,19 +35,11 @@
         }
     }
 }
-input[type="checkbox"] {
-    display: none;
-}
 
-input[type="checkbox"]:checked + .slidingMenu {
-    top: 0;
-    z-index: 1;
-}
 .slidingMenu a{
     display: inline-block;
     transition: color 0.3s ease;
     color: $headerBackground;
-    // color: $bodyColour;
     padding: 20px;
     width: 100%;
 }
@@ -58,15 +50,62 @@ input[type="checkbox"]:checked + .slidingMenu {
     border-bottom: 1px solid $secondBaseColour;
 } 
 
-label {
+.hamburger{
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     color: $baseColour;
     font-size: 3rem;
     top: 20px;
     right: 20px;
 }
 
+.scrollDown,
+.scrollDown::before{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+}
+
+.scrollDown{
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 1px $secondaryBackground;
+    border-radius: 25px;
+}
+
+.scrollDown::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: $secondaryBackground;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+}
+
+
+// Go to TOP button style...
+
+.scrollUp{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    a{
+        padding: 10px;
+        &:active,
+        &:focus{
+            background-color: transparent;
+        }
+        i{
+            font-size: 3.5rem;
+            color: $secondaryBackground;
+        }
+    }
+    
+}
 
 @media only screen and (min-width: 1024px){
     .topNav{
@@ -75,6 +114,10 @@ label {
 
     .slidingMenuToggle{
         display: none;
+    }
+
+    .scrollUp a:hover{
+        background-color: transparent;
     }
 }
 

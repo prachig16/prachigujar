@@ -40,7 +40,7 @@ input[type="email"]{
 textarea[id="message"]{
     background-color: transparent;
     text-align: left;
-    border: 2px solid $baseColour; 
+    border: 2px solid $secondBaseColour; 
     padding: 10px;
     margin: 30px 0;
     width: 100%;   
@@ -51,6 +51,16 @@ textarea[id="message"]{
     padding: 15px 30px;
     margin-bottom: 50px;
     width: 100%;
+}
+
+
+// Social Nav styles....
+.socialNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
 }
 
 @media only screen and (min-width: 992px){

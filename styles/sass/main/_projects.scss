@@ -1,6 +1,9 @@
-.projectsContainer .heading{
-    margin: 5% 0 15%;
-}
+.projectsContainer {
+    margin-bottom: 20px;
+    .heading{
+        margin: 5% 0 15%;
+    }
+}    
 
 .project{
     background-color: $headingBackground;

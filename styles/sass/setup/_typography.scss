@@ -1,5 +1,6 @@
-// Setting heading styles.....
 
+
+// Heading styles..
 h1,
 h2,
 h3,
@@ -129,9 +130,45 @@ a:active{
     }
 }
 .submit{
-    border: 2px solid $baseColour;
-    box-shadow: 0 0 5px $baseColour;   
+    color: $secondaryBackground;
+    border: 2px solid $secondBaseColour;
+    box-shadow: -5px 5px $secondBaseColour;  
+    &:active,
+    &:focus{
+        background-color: $headingBackground;
+        box-shadow: -3px 3px $baseColour;
+        transform: translateX(-2px);
+    }
 }
+
+// Social Media Icons styling....
+.socialNav{
+    li{
+        padding: 0;
+        display: flex;
+        margin-right: 20px;
+        &:last-of-type{
+            margin-right: 0;
+        }
+        a{
+            color: $secondaryBackground;
+            padding: 10px;
+            border: 2px solid $headingBackground;
+            border-radius: 10px;
+            box-shadow: 0 0 5px $headingBackground;
+            &:active,
+            &:focus{
+                color: $secondaryBackground;
+                background-color: $secondBaseColour;
+            }
+            i{
+                font-size: 2.5rem; 
+                padding: 10px;   
+            }
+        }
+    }
+} 
+ 
 
 @media only screen and (min-width: 768px){
     h1{
@@ -181,5 +218,7 @@ a:active{
     }
     .submit:hover{
         background-color: $headingBackground;
+        box-shadow: -3px 3px $baseColour;
+        transform: translateX(-2px);
     }
 }
