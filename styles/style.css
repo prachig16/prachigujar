@@ -933,6 +933,10 @@ main .aboutContainer {
 }
 
 .infoContainer figure {
+  border-radius: 0px 100px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 5px #0cc0de;
+          box-shadow: 0 0 5px #0cc0de;
   margin: 0 auto 20px;
   width: 500px;
 }

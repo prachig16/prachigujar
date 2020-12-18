@@ -15,6 +15,9 @@ main{
     align-items: center;
     padding: 20px 0;
     figure{
+        border-radius: 0px 100px;
+        overflow: hidden;
+        box-shadow: 0 0 5px #0cc0de;
         margin: 0 auto 20px;
         width: 500px;
     }    
