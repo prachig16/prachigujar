@@ -27,7 +27,7 @@ $(document).ready(function() {
     e.preventDefault();
     $('html').animate({
         scrollTop: $('#about').offset().top
-    }, 1000);
+    }, 500);
     })
 
     // scroll animation for the projects to appear
