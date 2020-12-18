@@ -10,9 +10,10 @@ header{
     padding: 20px 0;
     .topContainer{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 0;
+        padding: 10px 20px;
+        transition: all linear 0.5s;
     }
     .introContainer{
         position: absolute;

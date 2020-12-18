@@ -284,6 +284,10 @@ h1 {
   color: #275c80;
 }
 
+.aboutMe .animationColour {
+  font-style: italic;
+}
+
 h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -715,13 +719,15 @@ header .topContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
+  padding: 10px 20px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
 }
 
 header .introContainer {
@@ -770,13 +776,24 @@ header .introContainer {
 }
 
 .topNav li a {
+  color: rgba(52, 53, 57, 0.9);
   padding: 5px 10px;
   margin: 0px 5px;
-  color: rgba(52, 53, 57, 0.9);
 }
 
 .topNav li a:hover {
   color: #e3e5d2;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  background-color: rgba(250, 250, 250, 0.1);
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  right: 0;
+  left: 0;
 }
 
 .slidingMenuToggle {
