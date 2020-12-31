@@ -933,12 +933,12 @@ main .aboutContainer {
 }
 
 .infoContainer figure {
-  border-radius: 0px 100px;
+  border-radius: 50%;
   overflow: hidden;
   -webkit-box-shadow: 0 0 5px #0cc0de;
           box-shadow: 0 0 5px #0cc0de;
-  margin: 0 auto 20px;
-  width: 500px;
+  margin: 0 20px 20px 0;
+  width: calc((100% - 20px) / 3);
 }
 
 .infoContainer .aboutMe {
@@ -953,6 +953,9 @@ main .aboutContainer {
   .infoContainer {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .infoContainer figure {
+    width: calc((100% - 20px) / 4);
   }
   .infoContainer .aboutMe {
     margin: 0 0 0 30px;
@@ -1050,10 +1053,6 @@ main .aboutContainer {
   margin: 0 0 25% 0;
 }
 
-.project:last-of-type {
-  margin: 0 0 10% 0;
-}
-
 .project figure {
   position: absolute;
   top: -10%;
@@ -1124,9 +1123,6 @@ main .aboutContainer {
   .project {
     margin: 10% 10% 25% 10%;
   }
-  .project:last-of-type {
-    margin: 10%;
-  }
   .project figure {
     padding: 20px 50px;
   }
@@ -1142,8 +1138,7 @@ main .aboutContainer {
   .projectsContainer .heading {
     margin: 5% 0;
   }
-  .project,
-  .project:last-of-type {
+  .project {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-align: center;
@@ -1151,13 +1146,11 @@ main .aboutContainer {
             align-items: center;
     margin: 50px auto;
   }
-  .project figure,
-  .project:last-of-type figure {
+  .project figure {
     position: static;
     padding: 0;
   }
-  .project .projectInfo,
-  .project:last-of-type .projectInfo {
+  .project .projectInfo {
     margin-top: 0;
   }
   .projectTwo,
@@ -1184,8 +1177,21 @@ main .aboutContainer {
           align-items: center;
 }
 
-.contactFormContainer p {
-  text-align: left;
+.contactFormContainer .contactInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactFormContainer .contactInfo figure {
+  width: 50%;
 }
 
 .formContainer {

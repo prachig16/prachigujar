@@ -15,11 +15,11 @@ main{
     align-items: center;
     padding: 20px 0;
     figure{
-        border-radius: 0px 100px;
+        border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 0 5px #0cc0de;
-        margin: 0 auto 20px;
-        width: 500px;
+        margin: 0 20px 20px 0;
+        width: calc((100% - 20px) / 3);
     }    
     .aboutMe{
         padding: 10px;
@@ -32,6 +32,9 @@ main{
 @media only screen and (min-width: 992px){
     .infoContainer{
         flex-wrap: nowrap;
+        figure{
+            width: calc((100% - 20px) / 4);
+        }
         .aboutMe{
             margin: 0 0 0 30px;
             width: calc((100% - 30px) / 2);
