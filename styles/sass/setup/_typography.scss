@@ -9,14 +9,16 @@ h4{
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.6;
-    color: $primaryHeading;
+    color: $bodyColour;
     text-align: center;
     padding: 0;
     margin: 0 auto;
 }
+
 .baseColour{
     color: $baseColour;
 }
+
 h1{
     border-right: solid 3px $baseColour;
     overflow: hidden;
@@ -24,7 +26,7 @@ h1{
 }
 
 .animationColour{
-    color: $secondBaseColour;
+    color: $baseColour;
 }
 
 .aboutMe .animationColour{
@@ -44,7 +46,7 @@ h4{
 }
 
 h4{
-    color: $secondaryBackground;
+    color: $baseColour;
     font-weight: 500;
     margin: 0;
 }
@@ -60,19 +62,18 @@ textarea,
     line-height: 1.5;
     font-weight: 400;
     text-align: center;
-    color: $headerBackground;
+    color: $bodyColour;
 }
 
-
-.logo{
-    color: $secondBaseColour;
-}
+// .logo{
+//     color: $secondBaseColour;
+// }
 
 a:focus,
 a:active{
-    color: $secondaryBackground;
-    background-color: $secondBaseColour;
-    box-shadow: 0 0 5px $secondaryBackground;
+    color: $primaryHeading;
+    // background-color: $secondBaseColour;
+    box-shadow: 0 0 5px $baseColour;
     opacity: 0.8;
     border-radius: 5px;
 }
@@ -81,7 +82,7 @@ a:active{
     text-align: center;
     font-size: 4rem;
     font-weight: 900;
-    color: $headingBackground;
+    color: $secondaryHeading;
     font-family: $bodyFont;
     margin-top: -18px;
 }
@@ -101,35 +102,36 @@ a:active{
     text-align: center;
 }
 
-// About Section Typo.....
+// About Section
 .aboutMe p{
     text-align: left;
-    color: $secondaryBackground;
 }
 
 
-// Skill Section Typo........
+// Skills Section:
 .skillTitle{
     font-size: 5rem;
-    color: $secondaryBackground;
+    color: $bodyColour;
     &:focus,
     &:active{
         color: $baseColour;
+        transform: scale(1.1);
+        transition: ease;
     }
 }
 
 .skillsList .skillTitle p{
     font-size: 1.75rem;
-    color: $headerBackground;
 }
 
-// Buttons for projects and submit form
+// Projects Section:
 .project .projectInfo a,
 .submit{
     text-transform: uppercase;
-    background-color: $sectionBackground;
+    color: $primaryBackground;
+    background-color: $bodyColour;
     border-radius: 10px;
-    box-shadow: 0 0 5px $headingBackground;
+    box-shadow: 0 0 5px $baseColour;
     letter-spacing: 2px;
     padding: 10px 20px;
     margin: 0;
@@ -138,14 +140,30 @@ a:active{
         color: $baseColour;
     }
 }
+
+.project .projectInfo a.anchorBaseColour{
+    background-color: transparent;
+    color: $baseColour;
+    padding: 0;
+    box-shadow: none;
+    display: inline-block;
+    text-transform: none;
+    &:focus,
+    &:active{
+        transform: none;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
+
+
 .submit{
-    color: $secondaryBackground;
-    border: 2px solid $secondBaseColour;
-    box-shadow: -5px 5px $secondBaseColour;  
+    border: 2px solid $baseColour;
+    box-shadow: -5px 5px $baseColour;  
     &:active,
     &:focus{
-        background-color: $headingBackground;
-        box-shadow: -3px 3px $baseColour;
+        background-color: $primaryHeading;
+        box-shadow: -3px 3px $primaryHeading;
         transform: translateX(-2px);
     }
 }
@@ -160,15 +178,14 @@ a:active{
             margin-right: 0;
         }
         a{
-            color: $secondaryBackground;
+            color: $primaryBackground;
             padding: 10px;
-            border: 2px solid $headingBackground;
+            border: 2px solid $primaryBackground;
             border-radius: 10px;
-            box-shadow: 0 0 5px $headingBackground;
+            box-shadow: 0 0 5px $baseColour;
             &:active,
             &:focus{
-                color: $secondaryBackground;
-                background-color: $secondBaseColour;
+                background-color: $primaryHeading;
             }
             i{
                 font-size: 2.5rem; 
@@ -189,6 +206,9 @@ footer p{
     h1{
         font-size: 3.5rem;
     }
+    h2{
+        font-size: 3rem;
+    }
     h3{
         font-size: 2.5rem;
     }
@@ -206,6 +226,11 @@ footer p{
     h1{
         font-size: 4rem;
     }
+
+    h2{
+        font-size: 3.8rem;
+    }
+
     h3{
         font-size: 3.5rem;
     }
@@ -217,8 +242,8 @@ footer p{
 
 @media only screen and (min-width: 1200px){
     a:hover{
-        color: $secondaryBackground;
-        background-color: $secondBaseColour;
+        color: $primaryHeading;
+        // background-color: $secondBaseColour;
         opacity: 0.8;
         border-radius: 5px;
     }
@@ -230,10 +255,17 @@ footer p{
     .project .projectInfo a:hover,
     .submit:hover{
         color: $baseColour;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .project .projectInfo a.anchorBaseColour:hover{
+        transform: none;
+        text-decoration: underline;
+        font-style: italic;
     }
     .submit:hover{
-        background-color: $headingBackground;
-        box-shadow: -3px 3px $baseColour;
+        background-color: $primaryHeading;
+        box-shadow: -3px 3px $primaryHeading;
         transform: translateX(-2px);
     }
 }

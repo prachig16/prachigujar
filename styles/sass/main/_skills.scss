@@ -1,5 +1,5 @@
 .skillsContainer{
-    padding: 5rem 0;
+    padding: 1rem 0 5rem;
     margin-bottom: 20px;
 }
 
@@ -7,20 +7,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: $headingBackground;
+    background-color: $secondaryBackground;
     border-radius: 50px;
-    box-shadow: 0 0 5px $headerBackground;
+    box-shadow: 0 0 5px $baseColour;
     padding: 30px;
     .skillTitle{
         display: flex;
         flex-direction: column;
-        width: calc((100% - 20px) / 2);
+        width: calc((100% - 40px) / 2);
         justify-content: space-evenly;
         align-items: center;
-        margin: 20px 20px 20px 0;
-        &:nth-of-type(2n){
-            margin-right: 0;
-        }
+        margin: 20px 0 20px;
         p{
             padding: 15px;
         }
@@ -29,20 +26,12 @@
 
 @media only screen and (min-width: 768px){
     .skillsList .skillTitle{
-        width: calc((100% - 40px) / 3);
-        margin: 20px 20px 20px 0;
-        &:nth-of-type(3n){
-            margin-right: 0;
-        }
+        width: calc((100% - 20px) / 3);
     }
     
 }
 @media only screen and (min-width: 992px){
     .skillsList .skillTitle{
-        width: calc((100% - 60px) / 4);
-        margin: 20px 20px 20px 0;
-        &:nth-of-type(4n){
-            margin-right: 0;
-        }
+        width: calc((100% - 20px) / 4);
     }
 }

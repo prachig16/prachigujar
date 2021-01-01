@@ -1,10 +1,9 @@
 body{
-    background-color: $sectionBackground;
+    background-color: $primaryBackground;
 }
 header{
     min-height: 100vh;
-    background-image: url(../assets/test1.jpg);
-    // background: linear-gradient(45deg, rgba(255, 145, 0, 0.75), rgba(224, 0, 17, 0.75)), url(../assets/test1.jpg);
+    background-image: url(https://i.ibb.co/tzt28sv/IMG-0448.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -21,9 +20,9 @@ header{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: $headerBackground;
+        background-color: $secondaryBackground;
         border-radius: 20px;
-        box-shadow: 0 0 5px $secondBaseColour;
+        box-shadow: 0 0 5px $primaryHeading;
         padding: 50px;
         width: 349px;
     }

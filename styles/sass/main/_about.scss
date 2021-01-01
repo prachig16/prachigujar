@@ -3,7 +3,7 @@ main{
     padding-top: 80px;
     .aboutContainer{
         padding: 5rem 0 0 0;
-        margin-bottom: 20px;
+        min-height: 100vh;
     }
 }
 
@@ -17,9 +17,9 @@ main{
     figure{
         border-radius: 50%;
         overflow: hidden;
-        box-shadow: 0 0 5px #0cc0de;
+        box-shadow: 0 0 5px $baseColour;
         margin: 0 20px 20px 0;
-        width: calc((100% - 20px) / 3);
+        width: calc((100% - 20px) / 2);
     }    
     .aboutMe{
         padding: 10px;

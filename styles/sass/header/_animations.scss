@@ -11,7 +11,7 @@ h1 {
 
 // Cursor Animation
 @keyframes animatedCursor{
-  from{border-right-color: $secondBaseColour;}
+  from{border-right-color: $baseColour;}
   to{border-right-color: transparent;}
 }
 
