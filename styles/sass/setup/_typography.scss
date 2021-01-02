@@ -141,7 +141,8 @@ a:active{
     }
 }
 
-.project .projectInfo a.anchorBaseColour{
+.project .projectInfo a.anchorBaseColour,
+.contactInfo a.anchorBaseColour{
     background-color: transparent;
     color: $baseColour;
     padding: 0;
@@ -274,7 +275,8 @@ footer p{
         transform: scale(1.1);
         transition: 0.5s;
     }
-    .project .projectInfo a.anchorBaseColour:hover{
+    .project .projectInfo a.anchorBaseColour:hover,
+    .contactInfo a.anchorBaseColour:hover{
         transform: none;
         text-decoration: underline;
         font-style: italic;

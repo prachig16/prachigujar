@@ -397,7 +397,8 @@ a:active {
   color: #b4003c;
 }
 
-.project .projectInfo a.anchorBaseColour {
+.project .projectInfo a.anchorBaseColour,
+.contactInfo a.anchorBaseColour {
   background-color: transparent;
   color: #b4003c;
   padding: 0;
@@ -407,7 +408,9 @@ a:active {
   text-transform: none;
 }
 
-.project .projectInfo a.anchorBaseColour:focus, .project .projectInfo a.anchorBaseColour:active {
+.project .projectInfo a.anchorBaseColour:focus, .project .projectInfo a.anchorBaseColour:active,
+.contactInfo a.anchorBaseColour:focus,
+.contactInfo a.anchorBaseColour:active {
   -webkit-transform: none;
           transform: none;
   font-style: italic;
@@ -534,7 +537,8 @@ footer p {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .project .projectInfo a.anchorBaseColour:hover {
+  .project .projectInfo a.anchorBaseColour:hover,
+  .contactInfo a.anchorBaseColour:hover {
     -webkit-transform: none;
             transform: none;
     text-decoration: underline;
