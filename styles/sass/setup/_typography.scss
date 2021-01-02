@@ -71,8 +71,8 @@ textarea,
 
 a:focus,
 a:active{
-    color: $primaryHeading;
-    // background-color: $secondBaseColour;
+    color: $primaryBackground;
+    background-color: $primaryHeading;
     box-shadow: 0 0 5px $baseColour;
     opacity: 0.8;
     border-radius: 5px;
@@ -90,7 +90,7 @@ a:active{
 .headingContent{
     text-align: center;
     position: relative;
-    top: -40px;
+    top: -43px;
 }
 
 .borderBottom{
@@ -159,10 +159,13 @@ a:active{
 
 .submit{
     border: 2px solid $baseColour;
-    box-shadow: -5px 5px $baseColour;  
+    box-shadow: -5px 5px $baseColour; 
+    background: $primaryBackground;
+    color: $primaryHeading; 
     &:active,
     &:focus{
         background-color: $primaryHeading;
+        color: $primaryBackground;
         box-shadow: -3px 3px $primaryHeading;
         transform: translateX(-2px);
     }
@@ -178,14 +181,17 @@ a:active{
             margin-right: 0;
         }
         a{
-            color: $primaryBackground;
+            color: $baseColour;
             padding: 10px;
             border: 2px solid $primaryBackground;
             border-radius: 10px;
             box-shadow: 0 0 5px $baseColour;
             &:active,
             &:focus{
+                color: $primaryBackground;
                 background-color: $primaryHeading;
+                transform: scale(1.1);
+                transition: 0.5s;
             }
             i{
                 font-size: 2.5rem; 
@@ -237,18 +243,28 @@ footer p{
     h4{
         font-size: 3.5rem;
     }
+    .headingContent{
+        top: -55px;
+    }
 }
 
 
 @media only screen and (min-width: 1200px){
     a:hover{
-        color: $primaryHeading;
-        // background-color: $secondBaseColour;
-        opacity: 0.8;
+        color: $primaryBackground;
+        background-color: $primaryHeading;
         border-radius: 5px;
     }
+
+    .socialNav li a:hover{
+        color: $primaryBackground;
+        background-color: $baseColour;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
     .borderBottom:hover{
-        width: 120px;
+        width: 250px;
     }
 
     .skillTitle:hover,
@@ -264,7 +280,9 @@ footer p{
         font-style: italic;
     }
     .submit:hover{
-        background-color: $primaryHeading;
+        background-color: $baseColour;
+        color: $primaryBackground;
+        border: 2px solid $primaryBackground;
         box-shadow: -3px 3px $primaryHeading;
         transform: translateX(-2px);
     }

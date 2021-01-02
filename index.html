@@ -19,15 +19,22 @@
 <body>
     <header>
         <section class="topContainer wrapper">
-            <nav>
-                <ul class="topNav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            
+            <nav class="stickyNav">
+                <div class="top">
+                    <figure class="logo">
+                        <img src="./assets/logo.png" alt="">
+                    </figure>
+                    <ul class="topNav">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
             
+
             <!-- Sliding nav for Mobile version -->
             <nav class="slidingMenuToggle">
                 <i class="fa fa-bars hamburger"></i>
@@ -159,7 +166,7 @@
                     <!-- PROJECT 1: Secret Santa Selector -->
                     <div class="projectOne project">
                         <figure class="projectImage">
-                            <img src="./assets/projectOne.png" alt="secret santa selector website">
+                            <img src="https://i.ibb.co/PcJS5WN/p1.png" alt="secret santa selector website">
                         </figure>
                         <section class="projectInfo">
                             <h4>Secret Santa Selector</h4>
@@ -185,7 +192,7 @@
                     <!-- PROJECT 2: Reserved -->
                     <div class="projectTwo project">
                         <figure class="projectImage">
-                            <img src="./assets/projectTwo.png" alt="website to search restaurants and reserve a table">
+                            <img src="https://i.ibb.co/ct3Nyf1/p2.png" alt="website to search restaurants and reserve a table">
                         </figure>
                         <section class="projectInfo">
                             <h4>Reserved</h4>
@@ -212,7 +219,7 @@
                     <!-- PROJECT 3: Know your artist!  -->
                     <div class="projectThree project">
                         <figure class="projectImage">
-                            <img src="./assets/projectThree.png" alt="website to search for artists' details">
+                            <img src="https://i.ibb.co/vHsjPKC/p3.png" alt="website to search for artists' details">
                         </figure>
                         <section class="projectInfo">
                             <h4>Know your Artist!</h4>
@@ -240,7 +247,7 @@
                     <!-- PROJECT 4: PSD conversion for Shoe Kloset! -->
                     <div class="projectFour project">
                         <figure class="projectImage">
-                            <img src="./assets/projectFour.png" alt="">
+                            <img src="https://i.ibb.co/6WKwj6s/p4.png" alt="shoe kloset website">
                         </figure>
                         <section class="projectInfo">
                             <h4>Shoe Kloset!</h4>
@@ -299,19 +306,18 @@
                             Have an idea about an app or a project? Let's team up and make it a reality!
                         </p>
                         <figure>
-                            <img src="./assets/prachi.GIF" alt="animated emoji for prachi">
+                            <img src="https://i.ibb.co/bsr72Kr/prachi.gif" alt="animated emoji for prachi">
                         </figure>
-
                     </div>
                     
                     <!-- Contatc Form -->
                     <form action="https://formspree.io/f/mgepnbkg" method="POST" class="contactForm">
                         <div class="formContainer">
                             <label for="name" class="srOnly">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Name">
+                            <input type="text" id="name" name="name" placeholder="What's your name?">
                     
                             <label for="email" class="srOnly">Email</label>
-                            <input type="email" id="email" name="_replyto" placeholder="Email">
+                            <input type="email" id="email" name="_replyto" placeholder="Your@email.com">
                         </div>
                     
                         <label for="message" class="srOnly">Message</label>

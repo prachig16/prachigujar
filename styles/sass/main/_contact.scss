@@ -14,11 +14,15 @@
         figure{
             width: 50%;
         }
+        p{
+            padding: 10px 50px;
+        }
     }
 }
 
 .formContainer{
     display: flex;
+    flex-wrap: wrap;
 }
 
 input[type="text"],
@@ -28,36 +32,31 @@ input[type="email"]{
     text-align: left;
     border-bottom: 2px solid $baseColour;
     padding: 20px 5px;
+    width: 100%;
 }
 
 input[type="text"]{
-    margin: 0;
-    margin-right: 20px;
-    width: calc(50% - 20px);
+    border-left: 2px solid $baseColour;
 }
 
 input[type="email"]{
-    margin: 0;
-    margin-left: 20px;
-    width: calc(50% - 20px);
+    border-right: 2px solid $baseColour;
 }
 
 textarea[id="message"]{
     background-color: transparent;
     text-align: left;
-    border: 2px solid $primaryHeading; 
+    border: 2px solid $baseColour; 
     padding: 10px;
     margin: 30px 0;
     width: 100%;   
 }
-
 
 .submit{
     padding: 15px 30px;
     margin-bottom: 50px;
     width: 100%;
 }
-
 
 // Social Nav styles....
 .socialNav{
@@ -75,5 +74,16 @@ textarea[id="message"]{
     .contactFormContainer{
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 30px;
+    }
+    input[type="text"]{
+        margin: 0;
+        margin-right: 20px;
+        width: calc(50% - 20px);
+    }
+
+    input[type="email"]{
+        margin: 0;
+        margin-left: 20px;
+        width: calc(50% - 20px);
     }
 }

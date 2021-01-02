@@ -1,27 +1,15 @@
     // setting the scss variables
  
     // colors...
-    // $primaryHeading: #2C2d30;
-    // $bodyColour: rgba(52, 53, 57, 0.9);
-    // $baseColour: #0cc0de;
-    // $secondBaseColour: rgb(39, 92, 128);
-    // $headingBackground: rgba(250, 250, 250, 0.1);
-    // $primaryBackground: #fafafa;
-    // $secondaryBackground: #e3e5d2;
-    // $headerBackground: rgba(237, 239, 224, 0.5);
-    // $sectionBackground:  rgb(15, 15, 15);
-
     $bodyColour: #110307;
-    $primaryHeading: #480e1d;
+    $primaryHeading: rgb(72, 14, 29);
     $secondaryHeading: rgba(44, 45, 48, 0.2);
-    $primaryBackground: #F9F5F0;
+    $primaryBackground: #f9f5f0;
     $secondaryBackground: rgba(249, 245, 240, 0.6);
+    $tertiaryBackground: rgba(103, 52, 94, 0.6);
+    // $tertiaryBackground: rgba(72, 14, 29, 0.7);
     $baseColour: #b4003c;
-
-    // for DARK THEME: primaryHeading-->primaryBackground and vice versa
-    // for DARK THEME: otherHeading-->secondaryBackground and vice versa
-
-    
+        
     // Fonts....
     $headingFont:'Raleway', sans-serif;
     $bodyFont: 'Poppins', sans-serif;

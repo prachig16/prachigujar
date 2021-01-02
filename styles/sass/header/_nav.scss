@@ -1,26 +1,51 @@
-// TOP Nav styles....
-// TOP nav for larger screen
+// TOP NAV will be available only for larger screen
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: $secondaryBackground;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+    .logo{
+        width: 5%;
+        margin: 0;
+    }
+}
 .topNav{
-    display: none;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .topNav{
+    padding: 10px;
     li a{
-        color: $primaryBackground;
+        color: $primaryHeading;
+        text-transform: uppercase;
+        font-family: $headingFont;
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        border-left: 2px solid transparent;
+        border-bottom: 2px solid transparent;
         padding: 5px 10px;
         margin: 0px 5px; 
-        &:hover{
-            color: $bodyColour;
+        &:hover,
+        &:active,
+        &:focus{
+            cursor: pointer;
+            background-color: transparent;
+            border-left: 2px solid $primaryHeading;
+            border-bottom: 2px solid $primaryHeading;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
         }
-    } 
+    }
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
+.stickyNav {
+    display: none;
     position: fixed;
-    background-color: $secondaryBackground;
     top: 0;
     width: 100%;
     z-index: 999;
@@ -33,7 +58,7 @@
 .slidingMenuToggle{
     padding-top: 20px;
     .slidingMenu {
-        background-color: $bodyColour;
+        background-color: $tertiaryBackground;
         overflow: hidden;
         position: fixed;
         right: 0;
@@ -51,7 +76,7 @@
 
 .slidingMenu a{
     display: inline-block;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
     color: $primaryBackground;
     padding: 20px;
     width: 100%;
@@ -84,8 +109,9 @@
     height: 70px;
     margin-left: -20px;
     margin-top: -35px;
-    box-shadow: inset 0 0 0 2px $baseColour;
+    box-shadow: inset 0 0 6px 2px $baseColour;
     border-radius: 25px;
+    border: 2px solid $baseColour;
 }
 
 .scrollDown::before{
@@ -120,8 +146,8 @@
 }
 
 @media only screen and (min-width: 1024px){
-    .topNav{
-        display: flex;
+    .stickyNav{
+        display: inline-block;
     }
 
     .slidingMenuToggle{

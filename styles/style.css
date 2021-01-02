@@ -324,7 +324,8 @@ textarea,
 
 a:focus,
 a:active {
-  color: #480e1d;
+  color: #f9f5f0;
+  background-color: #480e1d;
   -webkit-box-shadow: 0 0 5px #b4003c;
           box-shadow: 0 0 5px #b4003c;
   opacity: 0.8;
@@ -343,7 +344,7 @@ a:active {
 .headingContent {
   text-align: center;
   position: relative;
-  top: -40px;
+  top: -43px;
 }
 
 .borderBottom {
@@ -380,7 +381,7 @@ a:active {
 .project .projectInfo a,
 .submit {
   text-transform: uppercase;
-  color: #F9F5F0;
+  color: #f9f5f0;
   background-color: #110307;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 5px #b4003c;
@@ -417,10 +418,13 @@ a:active {
   border: 2px solid #b4003c;
   -webkit-box-shadow: -5px 5px #b4003c;
           box-shadow: -5px 5px #b4003c;
+  background: #f9f5f0;
+  color: #480e1d;
 }
 
 .submit:active, .submit:focus {
   background-color: #480e1d;
+  color: #f9f5f0;
   -webkit-box-shadow: -3px 3px #480e1d;
           box-shadow: -3px 3px #480e1d;
   -webkit-transform: translateX(-2px);
@@ -440,16 +444,21 @@ a:active {
 }
 
 .socialNav li a {
-  color: #F9F5F0;
+  color: #b4003c;
   padding: 10px;
-  border: 2px solid #F9F5F0;
+  border: 2px solid #f9f5f0;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 5px #b4003c;
           box-shadow: 0 0 5px #b4003c;
 }
 
 .socialNav li a:active, .socialNav li a:focus {
+  color: #f9f5f0;
   background-color: #480e1d;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .socialNav li a i {
@@ -494,16 +503,27 @@ footer p {
   h4 {
     font-size: 3.5rem;
   }
+  .headingContent {
+    top: -55px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   a:hover {
-    color: #480e1d;
-    opacity: 0.8;
+    color: #f9f5f0;
+    background-color: #480e1d;
     border-radius: 5px;
   }
+  .socialNav li a:hover {
+    color: #f9f5f0;
+    background-color: #b4003c;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
   .borderBottom:hover {
-    width: 120px;
+    width: 250px;
   }
   .skillTitle:hover,
   .project .projectInfo a:hover,
@@ -521,7 +541,9 @@ footer p {
     font-style: italic;
   }
   .submit:hover {
-    background-color: #480e1d;
+    background-color: #b4003c;
+    color: #f9f5f0;
+    border: 2px solid #f9f5f0;
     -webkit-box-shadow: -3px 3px #480e1d;
             box-shadow: -3px 3px #480e1d;
     -webkit-transform: translateX(-2px);
@@ -731,16 +753,16 @@ h1 {
 }
 
 body {
-  background-color: #F9F5F0;
+  background-color: #f9f5f0;
 }
 
 header {
   min-height: 100vh;
-  background-image: url(https://i.ibb.co/tzt28sv/IMG-0448.jpg);
+  background-image: url("https://i.ibb.co/0F2pk4v/IMG-0448.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 20px 0;
+  padding: 0 0 20px;
 }
 
 header .topContainer {
@@ -753,7 +775,7 @@ header .topContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
+  padding: 0px 20px 10px;
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
@@ -793,30 +815,68 @@ header .introContainer {
   }
 }
 
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px;
+  background-color: rgba(249, 245, 240, 0.6);
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.top .logo {
+  width: 5%;
+  margin: 0;
+}
+
 .topNav {
-  display: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.topNav {
+  padding: 10px;
+}
+
 .topNav li a {
-  color: #F9F5F0;
+  color: #480e1d;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   padding: 5px 10px;
   margin: 0px 5px;
 }
 
-.topNav li a:hover {
-  color: #110307;
+.topNav li a:hover, .topNav li a:active, .topNav li a:focus {
+  cursor: pointer;
+  background-color: transparent;
+  border-left: 2px solid #480e1d;
+  border-bottom: 2px solid #480e1d;
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
+.stickyNav {
+  display: none;
   position: fixed;
-  background-color: rgba(249, 245, 240, 0.6);
   top: 0;
   width: 100%;
   z-index: 999;
@@ -829,7 +889,7 @@ header .introContainer {
 }
 
 .slidingMenuToggle .slidingMenu {
-  background-color: #110307;
+  background-color: rgba(103, 52, 94, 0.6);
   overflow: hidden;
   position: fixed;
   right: 0;
@@ -848,9 +908,9 @@ header .introContainer {
 
 .slidingMenu a {
   display: inline-block;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-  color: #F9F5F0;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  color: #f9f5f0;
   padding: 20px;
   width: 100%;
 }
@@ -881,9 +941,10 @@ header .introContainer {
   height: 70px;
   margin-left: -20px;
   margin-top: -35px;
-  -webkit-box-shadow: inset 0 0 0 2px #b4003c;
-          box-shadow: inset 0 0 0 2px #b4003c;
+  -webkit-box-shadow: inset 0 0 6px 2px #b4003c;
+          box-shadow: inset 0 0 6px 2px #b4003c;
   border-radius: 25px;
+  border: 2px solid #b4003c;
 }
 
 .scrollDown::before {
@@ -919,10 +980,8 @@ header .introContainer {
 }
 
 @media only screen and (min-width: 1024px) {
-  .topNav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .stickyNav {
+    display: inline-block;
   }
   .slidingMenuToggle {
     display: none;
@@ -1222,10 +1281,16 @@ main .aboutContainer {
   width: 50%;
 }
 
+.contactFormContainer .contactInfo p {
+  padding: 10px 50px;
+}
+
 .formContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 input[type="text"],
@@ -1235,24 +1300,21 @@ input[type="email"] {
   text-align: left;
   border-bottom: 2px solid #b4003c;
   padding: 20px 5px;
+  width: 100%;
 }
 
 input[type="text"] {
-  margin: 0;
-  margin-right: 20px;
-  width: calc(50% - 20px);
+  border-left: 2px solid #b4003c;
 }
 
 input[type="email"] {
-  margin: 0;
-  margin-left: 20px;
-  width: calc(50% - 20px);
+  border-right: 2px solid #b4003c;
 }
 
 textarea[id="message"] {
   background-color: transparent;
   text-align: left;
-  border: 2px solid #480e1d;
+  border: 2px solid #b4003c;
   padding: 10px;
   margin: 30px 0;
   width: 100%;
@@ -1285,6 +1347,16 @@ textarea[id="message"] {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
+  }
+  input[type="text"] {
+    margin: 0;
+    margin-right: 20px;
+    width: calc(50% - 20px);
+  }
+  input[type="email"] {
+    margin: 0;
+    margin-left: 20px;
+    width: calc(50% - 20px);
   }
 }
 

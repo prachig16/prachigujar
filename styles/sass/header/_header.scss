@@ -3,16 +3,16 @@ body{
 }
 header{
     min-height: 100vh;
-    background-image: url(https://i.ibb.co/tzt28sv/IMG-0448.jpg);
+    background-image: url("https://i.ibb.co/0F2pk4v/IMG-0448.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 20px 0;
+    padding: 0 0 20px;
     .topContainer{ 
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 20px;
+        padding: 0px 20px 10px;
         transition: all linear 0.5s;
     }
     .introContainer{
