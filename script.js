@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    AOS.init();
 
     // declaring a function to change top positiong for the sliding menu in mobile
     const slidingBar = function (slideTop) {

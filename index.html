@@ -6,15 +6,21 @@
     <link rel="icon" type="image/png" href="./assets/favicon.ico">
     <title>Prachi Gujar</title>
 
-    <!-- Linking the Font family, Awesome font library and style sheet -->
+    <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <!-- Linking icons kit -->
+    <!-- Font Awesome Icon kit -->
     <script src="https://kit.fontawesome.com/ace8ce037f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
     <link rel="manifest" href="/site.webmanifest">
+
+    <!--ANIMATE ON SCROLL-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
+
 </head>
 <body>
     <header>
@@ -77,7 +83,7 @@
                         <div class="borderBottom"></div>
                     </div>
                 </div>
-                <div class="infoContainer">
+                <div class="infoContainer aos-init aos-animate" data-aos="fade-up-right">
                     <figure><img src="./assets/headshot.jpg" alt="headshot of "></figure>
                     <div class="aboutMe">
                         <p>Hi there, I'm Prachi 👋</p>
@@ -98,7 +104,7 @@
                         <div class="borderBottom"></div>
                     </div>
                 </div>
-                <ul class="skillsList">
+                <ul class="skillsList aos-init aos-animate" data-aos="fade-right">
                     <li class="skillTitle">
                         <i class="devicon-html5-plain icon" title="html" aria-hidden="true"></i>
                         <p>HTML</p>
@@ -345,7 +351,8 @@
         <p class="wrapper">Designed & developed with <span><i class="far fa-heart" aria-hidden="true"></i></span>  by Prachi Gujar 2020</p>
     </footer>
 
-    <!--Loading jQuery library and linking the script file  -->
+    <!--jQuery library and JS script file  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./script.js"></script>    
 </body>
