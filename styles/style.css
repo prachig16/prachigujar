@@ -332,19 +332,15 @@ a:active {
   border-radius: 5px;
 }
 
-.headingBackground {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 900;
-  color: rgba(44, 45, 48, 0.2);
-  font-family: "Poppins", sans-serif;
-  margin-top: -18px;
-}
-
 .headingContent {
   text-align: center;
-  position: relative;
-  top: -43px;
+  margin: 20px 0;
+}
+
+.headingContent h2 {
+  text-shadow: 16px 11px 3px rgba(44, 45, 48, 0.3);
+  letter-spacing: 0.2rem;
+  font-weight: 500;
 }
 
 .borderBottom {
@@ -430,8 +426,8 @@ a:active {
   color: #f9f5f0;
   -webkit-box-shadow: -3px 3px #480e1d;
           box-shadow: -3px 3px #480e1d;
-  -webkit-transform: translateX(-2px);
-          transform: translateX(-2px);
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 
 .socialNav li {
@@ -506,9 +502,6 @@ footer p {
   h4 {
     font-size: 3.5rem;
   }
-  .headingContent {
-    top: -55px;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -550,8 +543,8 @@ footer p {
     border: 2px solid #f9f5f0;
     -webkit-box-shadow: -3px 3px #480e1d;
             box-shadow: -3px 3px #480e1d;
-    -webkit-transform: translateX(-2px);
-            transform: translateX(-2px);
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
   }
 }
 
@@ -1001,7 +994,6 @@ main {
 
 main .aboutContainer {
   padding: 5rem 0 0 0;
-  min-height: 100vh;
 }
 
 .infoContainer {
@@ -1072,6 +1064,7 @@ main .aboutContainer {
   -webkit-box-shadow: 0 0 5px #b4003c;
           box-shadow: 0 0 5px #b4003c;
   padding: 30px;
+  margin-top: 50px;
 }
 
 .skillsList .skillTitle {
@@ -1103,6 +1096,9 @@ main .aboutContainer {
 }
 
 @media only screen and (min-width: 992px) {
+  .skillsContainer {
+    padding-top: 5rem;
+  }
   .skillsList .skillTitle {
     width: calc((100% - 20px) / 4);
   }
@@ -1112,8 +1108,8 @@ main .aboutContainer {
   margin-bottom: 20px;
 }
 
-.projectsContainer .heading {
-  margin: 5% 0 15%;
+.projectsContainer .projectsList {
+  margin-top: 30%;
 }
 
 .project {
@@ -1121,11 +1117,6 @@ main .aboutContainer {
   border-radius: 50px;
   -webkit-box-shadow: 0 0 5px #b4003c;
           box-shadow: 0 0 5px #b4003c;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   position: relative;
   padding: 30px 0;
   margin: 0 0 25% 0;
@@ -1135,7 +1126,7 @@ main .aboutContainer {
   margin: 0 0 10% 0;
 }
 
-.project figure {
+.project .projectImage {
   position: absolute;
   top: -10%;
   padding: 20px;
@@ -1178,7 +1169,7 @@ main .aboutContainer {
 }
 
 @media only screen and (min-width: 376px) {
-  .project figure {
+  .project .projectImage {
     top: -15%;
   }
   .project .projectInfo {
@@ -1187,7 +1178,7 @@ main .aboutContainer {
 }
 
 @media only screen and (min-width: 470px) {
-  .project figure {
+  .project .projectImage {
     top: -25%;
   }
   .project .projectInfo {
@@ -1205,56 +1196,73 @@ main .aboutContainer {
 }
 
 @media only screen and (min-width: 768px) {
+  .projectsContainer .projectsList {
+    margin-top: 25%;
+  }
   .project {
     margin: 10% 10% 25% 10%;
   }
   .project:last-of-type {
-    margin: 10%;
+    margin: 10% 10% 0;
   }
-  .project figure {
+  .project .projectImage {
     padding: 20px 50px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .project .projectInfo {
-    margin-top: 32%;
+  .projectsContainer .projectsList {
+    margin-top: 0;
   }
-}
-
-@media only screen and (min-width: 1200px) {
-  .projectsContainer .heading {
-    margin: 5% 0;
+  .project {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b";
   }
   .project,
   .project:last-of-type {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin: 50px auto;
   }
-  .project figure,
-  .project:last-of-type figure {
+  .project .projectImage,
+  .project:last-of-type .projectImage {
     position: static;
-    padding: 0;
+    grid-area: "a";
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 10px;
   }
   .project .projectInfo,
   .project:last-of-type .projectInfo {
     margin-top: 0;
+    padding: 20px 20px 20px 50px;
   }
-  .projectTwo,
-  .projectFour {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+  .project:last-of-type {
+    margin-bottom: 0;
+  }
+  .projectsContainer {
+    padding-top: 5rem;
+  }
+  .projectTwo .projectImage,
+  .projectFour .projectImage {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: b;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .project:last-of-type {
+    margin-bottom: 0;
   }
 }
 
 .contactContainer {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .contactFormContainer {
@@ -1287,6 +1295,7 @@ main .aboutContainer {
 
 .contactFormContainer .contactInfo p {
   padding: 10px 50px;
+  text-align: left;
 }
 
 .formContainer {
@@ -1305,14 +1314,6 @@ input[type="email"] {
   border-bottom: 2px solid #b4003c;
   padding: 20px 5px;
   width: 100%;
-}
-
-input[type="text"] {
-  border-left: 2px solid #b4003c;
-}
-
-input[type="email"] {
-  border-right: 2px solid #b4003c;
 }
 
 textarea[id="message"] {
@@ -1345,7 +1346,8 @@ textarea[id="message"] {
 
 @media only screen and (min-width: 992px) {
   .contactContainer {
-    margin-top: 5%;
+    padding-top: 5rem;
+    margin: 0;
   }
   .contactFormContainer {
     -ms-grid-columns: 1fr 1fr;

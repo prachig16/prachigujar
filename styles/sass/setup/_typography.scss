@@ -65,10 +65,6 @@ textarea,
     color: $bodyColour;
 }
 
-// .logo{
-//     color: $secondBaseColour;
-// }
-
 a:focus,
 a:active{
     color: $primaryBackground;
@@ -78,19 +74,15 @@ a:active{
     border-radius: 5px;
 }
 
-.headingBackground{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 900;
-    color: $secondaryHeading;
-    font-family: $bodyFont;
-    margin-top: -18px;
-}
 
 .headingContent{
     text-align: center;
-    position: relative;
-    top: -43px;
+    margin: 20px 0;
+    h2{
+        text-shadow: 16px 11px 3px rgba(44, 45, 48, 0.3);
+        letter-spacing: 0.2rem;
+        font-weight: 500;
+    }
 }
 
 .borderBottom{
@@ -168,7 +160,7 @@ a:active{
         background-color: $primaryHeading;
         color: $primaryBackground;
         box-shadow: -3px 3px $primaryHeading;
-        transform: translateX(-2px);
+        transform: translateX(-5px);
     }
 }
 
@@ -244,9 +236,6 @@ footer p{
     h4{
         font-size: 3.5rem;
     }
-    .headingContent{
-        top: -55px;
-    }
 }
 
 
@@ -286,6 +275,6 @@ footer p{
         color: $primaryBackground;
         border: 2px solid $primaryBackground;
         box-shadow: -3px 3px $primaryHeading;
-        transform: translateX(-2px);
+        transform: translateX(-5px);
     }
 }

@@ -11,6 +11,7 @@
     border-radius: 50px;
     box-shadow: 0 0 5px $baseColour;
     padding: 30px;
+    margin-top: 50px;
     .skillTitle{
         display: flex;
         flex-direction: column;
@@ -25,12 +26,16 @@
 }    
 
 @media only screen and (min-width: 768px){
+    
     .skillsList .skillTitle{
         width: calc((100% - 20px) / 3);
     }
     
 }
 @media only screen and (min-width: 992px){
+    .skillsContainer{
+        padding-top: 5rem;
+    }
     .skillsList .skillTitle{
         width: calc((100% - 20px) / 4);
     }

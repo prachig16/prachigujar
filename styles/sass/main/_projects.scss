@@ -1,23 +1,22 @@
 .projectsContainer {
     margin-bottom: 20px;
-    .heading{
-        margin: 5% 0 15%;
+    .projectsList{
+        margin-top: 30%;
     }
+    
 }    
 
 .project{
     background-color: $secondaryBackground;
     border-radius: 50px;
     box-shadow: 0 0 5px $baseColour;
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
     padding: 30px 0;
     margin: 0 0 25% 0;
     &:last-of-type{
         margin: 0 0 10% 0;
     }
-    figure{
+    .projectImage{
         position: absolute;
         top: -10%;
         padding: 20px;
@@ -57,7 +56,8 @@
 
 
 @media only screen and (min-width: 376px){
-    .project figure{
+    
+    .project .projectImage{
         top: -15%;
     }
     .project .projectInfo{
@@ -66,7 +66,7 @@
 }
 
 @media only screen and (min-width: 470px){
-    .project figure{
+    .project .projectImage{
         top: -25%;
     }
     .project .projectInfo{
@@ -86,44 +86,65 @@
 }
 
 @media only screen and (min-width: 768px){
+     
+    .projectsContainer .projectsList{
+        margin-top: 25%;
+    }
+    
     .project{
         margin: 10% 10% 25% 10%;
         &:last-of-type{
-            margin: 10%;
+            margin: 10% 10% 0;
         }
-
-        figure{
+        .projectImage{
             padding: 20px 50px;
         }
     } 
 }
 
 @media only screen and (min-width: 992px){
-    .project .projectInfo{
-        margin-top: 32%;
+    .projectsContainer .projectsList{
+        margin-top: 0;
+    }
+   
+     .project{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b";
+    }
+    
+    .project,
+    .project:last-of-type{
+        margin: 50px auto;
+        .projectImage{
+            position: static;
+            grid-area: "a";
+            justify-self: center;
+            align-self: center;
+            padding: 0 10px;
+        }
+        .projectInfo{
+            margin-top: 0;
+            padding: 20px 20px 20px 50px;
+        }
+    }  
+    .project:last-of-type{
+        margin-bottom: 0;
+    }
+
+    .projectsContainer{
+        padding-top: 5rem;
+    }
+
+    .projectTwo .projectImage,
+    .projectFour .projectImage{
+        grid-area: b;
     }
 }
 
 @media only screen and (min-width: 1200px){
-    .projectsContainer .heading{
-        margin: 5% 0;
-    }
-    .project,
+ 
     .project:last-of-type{
-        flex-wrap: nowrap;
-        align-items: center;
-        margin: 50px auto;
-        figure{
-            position: static;
-            padding: 0;
-        }
-        .projectInfo{
-            margin-top: 0;
-        }
-    }  
-
-    .projectTwo,
-    .projectFour{
-        flex-direction: row-reverse;
+        margin-bottom: 0;
     }
 }
