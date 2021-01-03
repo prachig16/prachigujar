@@ -1,50 +1,5 @@
 //Animation
-h1 {
-    animation: animatedHeading 3s steps(60,end) 1s  normal both,  animatedCursor 600ms steps(29,end) infinite;
-}
 
-// Heading animation
-@keyframes animatedHeading{
-    from{width: 0;}
-    to{width: 196px;}
-}
-
-// Cursor Animation
-@keyframes animatedCursor{
-  from{border-right-color: $baseColour;}
-  to{border-right-color: transparent;}
-}
-
-.onScrollLeft{
-    animation: fadeInLeft 1s ease-in;
-}
-.onScrollRight{
-    animation: fadeInRight 1s ease-in;
-}
-
-
-
-// Animation for project Divs, coded in JS.....
-@keyframes fadeInLeft{
-    0%{
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes fadeInRight{
-    0%{
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 // Animation for the scroll down:
 .scrollDown::before{

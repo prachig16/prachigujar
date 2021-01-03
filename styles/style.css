@@ -274,12 +274,6 @@ h4 {
   color: #b4003c;
 }
 
-h1 {
-  border-right: solid 3px #b4003c;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .animationColour {
   color: #b4003c;
 }
@@ -296,7 +290,7 @@ h2 {
 
 h3,
 h4 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -472,13 +466,14 @@ footer p {
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
-  h3 {
-    font-size: 2.5rem;
+  h3,
+  h4 {
+    font-size: 3rem;
   }
   p,
   a {
@@ -545,109 +540,6 @@ footer p {
             box-shadow: -3px 3px #480e1d;
     -webkit-transform: translateX(-5px);
             transform: translateX(-5px);
-  }
-}
-
-h1 {
-  -webkit-animation: animatedHeading 3s steps(60, end) 1s normal both, animatedCursor 600ms steps(29, end) infinite;
-          animation: animatedHeading 3s steps(60, end) 1s normal both, animatedCursor 600ms steps(29, end) infinite;
-}
-
-@-webkit-keyframes animatedHeading {
-  from {
-    width: 0;
-  }
-  to {
-    width: 196px;
-  }
-}
-
-@keyframes animatedHeading {
-  from {
-    width: 0;
-  }
-  to {
-    width: 196px;
-  }
-}
-
-@-webkit-keyframes animatedCursor {
-  from {
-    border-right-color: #b4003c;
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-
-@keyframes animatedCursor {
-  from {
-    border-right-color: #b4003c;
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-
-.onScrollLeft {
-  -webkit-animation: fadeInLeft 1s ease-in;
-          animation: fadeInLeft 1s ease-in;
-}
-
-.onScrollRight {
-  -webkit-animation: fadeInRight 1s ease-in;
-          animation: fadeInRight 1s ease-in;
-}
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
   }
 }
 
@@ -788,7 +680,7 @@ header .introContainer {
   -webkit-box-shadow: 0 0 5px #480e1d;
           box-shadow: 0 0 5px #480e1d;
   padding: 50px;
-  width: 349px;
+  width: 345px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -796,7 +688,7 @@ header .introContainer {
     background-attachment: fixed;
   }
   header .introContainer {
-    width: 373px;
+    width: 435px;
   }
 }
 
@@ -1075,7 +967,7 @@ main .aboutContainer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: calc((100% - 40px) / 2);
+  width: calc((100% - 40px) / 3);
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1148,6 +1040,7 @@ main .aboutContainer {
   position: relative;
   color: #b4003c;
   z-index: 0;
+  font-size: 2rem;
   margin: 0 5px 0;
 }
 
@@ -1164,8 +1057,16 @@ main .aboutContainer {
   z-index: -1;
 }
 
+.project .projectInfo p .madeWith:first-of-type {
+  margin-left: 0;
+}
+
 .project .projectInfo .skillTags {
   margin-bottom: 20px;
+}
+
+.project .projectInfo .projectLink a:first-of-type {
+  margin-right: 10px;
 }
 
 @media only screen and (min-width: 376px) {
@@ -1174,6 +1075,9 @@ main .aboutContainer {
   }
   .project .projectInfo {
     margin-top: 20%;
+  }
+  .project .projectInfo:last-of-type {
+    margin-top: 25%;
   }
 }
 
@@ -1237,7 +1141,9 @@ main .aboutContainer {
     padding: 0 10px;
   }
   .project .projectInfo,
-  .project:last-of-type .projectInfo {
+  .project .projectInfo:last-of-type,
+  .project:last-of-type .projectInfo,
+  .project:last-of-type .projectInfo:last-of-type {
     margin-top: 0;
     padding: 20px 20px 20px 50px;
   }

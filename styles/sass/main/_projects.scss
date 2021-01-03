@@ -33,6 +33,7 @@
                 position: relative;
                 color: $baseColour;
                 z-index: 0;
+                font-size: 2rem;
                 margin: 0 5px 0;
                 &::after{
                     content: '';
@@ -46,10 +47,16 @@
                     opacity: .2;
                     z-index: -1;
                 }
+                &:first-of-type{
+                    margin-left: 0;
+                }
             }
         }
         .skillTags{
             margin-bottom: 20px;
+        }
+        .projectLink a:first-of-type{
+            margin-right: 10px;
         }
     }
 }
@@ -62,6 +69,9 @@
     }
     .project .projectInfo{
         margin-top: 20%;
+        &:last-of-type{
+            margin-top: 25%;
+        }
     }
 }
 
@@ -123,7 +133,8 @@
             align-self: center;
             padding: 0 10px;
         }
-        .projectInfo{
+        .projectInfo,
+        .projectInfo:last-of-type{
             margin-top: 0;
             padding: 20px 20px 20px 50px;
         }

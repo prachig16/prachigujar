@@ -54,9 +54,20 @@
         </section>
     
         <section class="introContainer wrapper">
-            <h1><span class="animationColour">H</span>ello, I'm Prachi.</h1>
-            <h3><span class="animationColour"><i class="fas fa-terminal icon" title="terminal" aria-hidden="true"></i></span>
-                Front-End Developer</h3>
+            <h1><span class="animationColour">H</span>ello, I'm Prachi</h1>
+
+            <!-- strings for typed animation -->
+            <div id="typed-strings" class="srOnly" style="display: none;">
+                <h3>Frontend Developer</h3>
+                <h3>Product Designer</h3>
+                <h3>Amateur Painter</h3>
+                <h3>Avid Traveler</h3>
+                <h3>Happy Bean</h3>
+            </div>
+            <h3>
+                <span class="animationColour"><i class="fas fa-terminal icon" title="terminal" aria-hidden="true"></i></span>
+                <span id="typed"></span>
+            </h3>
         </section>
         
         <div class="scrollDown">
@@ -155,7 +166,7 @@
           
                 <section class="projectsList">
                     <!-- PROJECT 1: Secret Santa Selector -->
-                    <div class="projectOne project">
+                    <div class="projectOne project aos-init aos-animate" data-aos="fade-left">
                         <figure class="projectImage">
                             <img src="https://i.ibb.co/PcJS5WN/p1.png" alt="secret santa selector website">
                         </figure>
@@ -181,7 +192,7 @@
                     </div>
 
                     <!-- PROJECT 2: Reserved -->
-                    <div class="projectTwo project">
+                    <div class="projectTwo project aos-init aos-animate" data-aos="fade-right">
                         <figure class="projectImage">
                             <img src="https://i.ibb.co/ct3Nyf1/p2.png" alt="website to search restaurants and reserve a table">
                         </figure>
@@ -208,7 +219,7 @@
                     </div>
 
                     <!-- PROJECT 3: Know your artist!  -->
-                    <div class="projectThree project">
+                    <div class="projectThree project aos-init aos-animate" data-aos="fade-left">
                         <figure class="projectImage">
                             <img src="https://i.ibb.co/vHsjPKC/p3.png" alt="website to search for artists' details">
                         </figure>
@@ -236,7 +247,7 @@
                     </div>
 
                     <!-- PROJECT 4: PSD conversion for Shoe Kloset! -->
-                    <div class="projectFour project">
+                    <div class="projectFour project aos-init aos-animate" data-aos="fade-right">
                         <figure class="projectImage">
                             <img src="https://i.ibb.co/6WKwj6s/p4.png" alt="shoe kloset website">
                         </figure>
@@ -293,7 +304,7 @@
                             Have an idea about an app or a project? Let's team up and make it a reality! 
                         </p>
                         <p>
-                           You can reach me directly at <a class="anchorBaseColour" href="mailto:gujarvprachi@gmail.com">gujarvprachi@gmail.com</a>
+                           <i class="fas fa-envelope baseColour" aria-hidden="true" title="mail"> : </i><a class="anchorBaseColour" href="mailto:gujarvprachi@gmail.com">gujarvprachi@gmail.com</a>
                         </p>
                         <figure>
                             <img src="https://i.ibb.co/bsr72Kr/prachi.gif" alt="animated emoji for prachi">
@@ -320,7 +331,7 @@
                 <nav >
                     <ul class="socialNav">
                         <li><a href="https://github.com/prachig16/"><i class="fab fa-github" aria-hidden="true" title="github"></i></a></li>
-                        <li><a href="mailto:gujarvprachi@gmail.com"><i class="fas fa-envelope" aria-hidden="true" title="mail"></i></a></li>
+                        <li><a href="https://prachi-gujar.medium.com"><i class="fab fa-medium-m"></i></a></li>
                         <li><a href="https://twitter.com/gujarprachi" aria-hidden="true" title="twitter"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="linkedin.com/in/prachigujar" aria-hidden="true" title="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>
@@ -333,8 +344,12 @@
         <p class="wrapper">Designed & developed with <span><i class="far fa-heart" aria-hidden="true"></i></span>  by Prachi Gujar 2020</p>
     </footer>
 
-    <!--jQuery library and JS script file  -->
+    <!-- Typed and AOS plug-in -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="./typed.js"></script>    
+
+    <!--jQuery library and JS script file  -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./script.js"></script>    
 </body>

@@ -1,5 +1,22 @@
+
+
+
 $(document).ready(function() {
-    AOS.init();
+
+    // Initialize the typing plug-in
+    const typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 65,
+        backSpeed: 30,
+        loop: true,
+        backDelay: 2000,
+        startDelay: 100,
+    });
+
+    // Initilalize AOS plug-in
+    AOS.init({
+        disable: window.innerWidth < 768
+    });
 
     // declaring a function to change top positiong for the sliding menu in mobile
     const slidingBar = function (slideTop) {
@@ -25,27 +42,6 @@ $(document).ready(function() {
     $('html').animate({
         scrollTop: $('#about').offset().top
     }, 500);
-    })
-
-    // scroll animation for the projects to appear
-    $(window).scroll(function () {
-        
-        scroll = $(window).scrollTop();
-        const wh = $(window).height() - 10;
-       
-        // animation for the projects to appear...
-        if (scroll > $('.projectOne').offset().top - wh) {
-            $('.projectOne').addClass('onScrollLeft');
-        }
-        if (scroll > $('.projectTwo').offset().top - wh) {
-            $('.projectTwo').addClass('onScrollRight');
-        }
-        if (scroll > $('.projectThree').offset().top - wh) {
-            $('.projectThree').addClass('onScrollLeft');
-        }
-        if (scroll > $('.projectFour').offset().top - wh) {
-            $('.projectFour').addClass('onScrollRight');
-        }
     })
 
 });

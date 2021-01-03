@@ -19,12 +19,6 @@ h4{
     color: $baseColour;
 }
 
-h1{
-    border-right: solid 3px $baseColour;
-    overflow: hidden;
-    white-space: nowrap;    
-}
-
 .animationColour{
     color: $baseColour;
 }
@@ -41,7 +35,7 @@ h2{
 
 h3,
 h4{
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     width: max-content;
 }
 
@@ -203,13 +197,14 @@ footer p{
 
 @media only screen and (min-width: 768px){
     h1{
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     h2{
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
-    h3{
-        font-size: 2.5rem;
+    h3,
+    h4{
+        font-size: 3rem;
     }
     p,
     a{
