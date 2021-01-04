@@ -1,3 +1,5 @@
+// PROJECT SECTION--------------------------
+
 .projectsContainer {
     margin-bottom: 20px;
     .projectsList{
@@ -58,104 +60,5 @@
         .projectLink a:first-of-type{
             margin-right: 10px;
         }
-    }
-}
-
-
-@media only screen and (min-width: 376px){
-    
-    .project .projectImage{
-        top: -15%;
-    }
-    .project .projectInfo{
-        margin-top: 20%;
-        &:last-of-type{
-            margin-top: 25%;
-        }
-    }
-}
-
-@media only screen and (min-width: 470px){
-    .project .projectImage{
-        top: -25%;
-    }
-    .project .projectInfo{
-        margin-top: 20%;
-        a{
-            margin: 10px 20px 0 0;
-        }
-    }
-        
-}
-
-@media only screen and (min-width: 470px){
-    .project .projectInfo{
-        margin-top: 25%;
-    }
-        
-}
-
-@media only screen and (min-width: 768px){
-     
-    .projectsContainer .projectsList{
-        margin-top: 25%;
-    }
-    
-    .project{
-        margin: 10% 10% 25% 10%;
-        &:last-of-type{
-            margin: 10% 10% 0;
-        }
-        .projectImage{
-            padding: 20px 50px;
-        }
-    } 
-}
-
-@media only screen and (min-width: 992px){
-    .projectsContainer .projectsList{
-        margin-top: 0;
-    }
-   
-     .project{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "a b";
-    }
-    
-    .project,
-    .project:last-of-type{
-        margin: 50px auto;
-        .projectImage{
-            position: static;
-            grid-area: "a";
-            justify-self: center;
-            align-self: center;
-            padding: 0 10px;
-        }
-        .projectInfo,
-        .projectInfo:last-of-type{
-            margin-top: 0;
-            padding: 20px 20px 20px 50px;
-        }
-    }  
-    .project:last-of-type{
-        margin-bottom: 0;
-    }
-
-    .projectsContainer{
-        padding-top: 5rem;
-    }
-
-    .projectTwo .projectImage,
-    .projectFour .projectImage{
-        grid-area: b;
-    }
-}
-
-@media only screen and (min-width: 1200px){
- 
-    .project:last-of-type{
-        margin-bottom: 0;
     }
 }

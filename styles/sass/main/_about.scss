@@ -1,43 +1,29 @@
-
-main{
+// ABOUT SECTION--------------------------
+main {
     padding-top: 80px;
-    .aboutContainer{
+    .aboutContainer { 
         padding: 5rem 0 0 0;
     }
 }
 
-.infoContainer{
+.infoContainer {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 0;
-    figure{
+    figure {
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 0 5px $baseColour;
         margin: 0 20px 20px 0;
         width: calc((100% - 20px) / 2);
     }    
-    .aboutMe{
+    .aboutMe {
         padding: 10px;
-        p{            
+        p {            
             padding: 0 20px 20px 20px;
-        }
-    }
-}
-
-@media only screen and (min-width: 992px){
-    
-    .infoContainer{
-        flex-wrap: nowrap;
-        figure{
-            width: calc((100% - 20px) / 4);
-        }
-        .aboutMe{
-            margin: 0 0 0 30px;
-            width: calc((100% - 30px) / 2);
         }
     }
 }

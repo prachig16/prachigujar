@@ -1,21 +1,19 @@
-// FORM styles.........
+// CONTACT FORM -----------------------------
 .contactContainer{
     margin-top: 10%;
 }
 .contactFormContainer{
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
     .contactInfo{
         display: flex;
         flex-direction: column;
         align-items: center;
         figure{
+            margin: 20px auto;
             width: 50%;
         }
         p{
-            padding: 10px 50px;
+            padding: 10px 20px;
             text-align: left;
         }
     }
@@ -52,33 +50,11 @@ textarea[id="message"]{
 }
 
 
-// Social Nav styles....
+// SOCIAL NAV------------
 .socialNav{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 
-}
-
-@media only screen and (min-width: 992px){
-    .contactContainer{
-        padding-top: 5rem;
-        margin: 0;
-    }
-    .contactFormContainer{
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 30px;
-    }
-    input[type="text"]{
-        margin: 0;
-        margin-right: 20px;
-        width: calc(50% - 20px);
-    }
-
-    input[type="email"]{
-        margin: 0;
-        margin-left: 20px;
-        width: calc(50% - 20px);
-    }
 }

@@ -1,6 +1,7 @@
 
+// TYPOGRAPHY-------------------
 
-// Heading styles..
+// HEADINGS-----------
 h1,
 h2,
 h3,
@@ -15,33 +16,21 @@ h4{
     margin: 0 auto;
 }
 
-.baseColour{
-    color: $baseColour;
-}
-
-.animationColour{
-    color: $baseColour;
-}
-
-.aboutMe .animationColour{
-    font-style: italic;
-}
-
-h2{
+h2 {
     font-size: 3rem;
     font-weight: 700;
     font-family: $headingFont;
 }
 
-h3,
-h4{
-    font-size: 2.8rem;
+h3 {
+    font-size: 2.2rem;
     width: max-content;
 }
 
 h4{
     color: $baseColour;
     font-weight: 500;
+    text-align: left;
     margin: 0;
 }
 
@@ -68,6 +57,14 @@ a:active{
     border-radius: 5px;
 }
 
+// COMMON--------------
+.baseColour {
+    color: $baseColour;
+}
+
+.animationColour{
+    color: $baseColour;
+}
 
 .headingContent{
     text-align: center;
@@ -88,15 +85,19 @@ a:active{
     text-align: center;
 }
 
-// About Section
+// ABOUT SECTION--------------------------
 .aboutMe p{
     text-align: left;
 }
 
+.aboutMe .animationColour{
+    font-style: italic;
+}
 
-// Skills Section:
+
+// SKILLS SECTION--------------------------
 .skillTitle{
-    font-size: 5rem;
+    font-size: 3rem;
     color: $bodyColour;
     &:focus,
     &:active{
@@ -107,10 +108,10 @@ a:active{
 }
 
 .skillsList .skillTitle p{
-    font-size: 1.75rem;
+    font-size: 1.4rem;
 }
 
-// Projects Section:
+// PROJECT SECTION--------------------------
 .project .projectInfo a,
 .submit{
     text-transform: uppercase;
@@ -143,7 +144,7 @@ a:active{
     }
 }
 
-
+/// CONTACT SECTION--------------------------
 .submit{
     border: 2px solid $baseColour;
     box-shadow: -5px 5px $baseColour; 
@@ -158,7 +159,7 @@ a:active{
     }
 }
 
-// Social Media Icons styling....
+// SOCIAL MEDIA---------------------
 .socialNav{
     li{
         padding: 0;
@@ -188,88 +189,8 @@ a:active{
     }
 } 
 
-// Footer....
+// Footer styles
 footer p{
     font-family: $headingFont;
     line-height: 1.2;
-}
- 
-
-@media only screen and (min-width: 768px){
-    h1{
-        font-size: 4rem;
-    }
-    h2{
-        font-size: 3.5rem;
-    }
-    h3,
-    h4{
-        font-size: 3rem;
-    }
-    p,
-    a{
-        font-size: 2rem;
-    }
-    .headingBackground{
-        font-size: 5rem;
-    }
-}
-
-
-@media only screen and (min-width: 992px){
-    h1{
-        font-size: 4rem;
-    }
-
-    h2{
-        font-size: 3.8rem;
-    }
-
-    h3{
-        font-size: 3.5rem;
-    }
-    h4{
-        font-size: 3.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 1200px){
-    a:hover{
-        color: $primaryBackground;
-        background-color: $primaryHeading;
-        border-radius: 5px;
-    }
-
-    .socialNav li a:hover{
-        color: $primaryBackground;
-        background-color: $baseColour;
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
-
-    .borderBottom:hover{
-        width: 250px;
-    }
-
-    .skillTitle:hover,
-    .project .projectInfo a:hover,
-    .submit:hover{
-        color: $baseColour;
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
-    .project .projectInfo a.anchorBaseColour:hover,
-    .contactInfo a.anchorBaseColour:hover{
-        transform: none;
-        text-decoration: underline;
-        font-style: italic;
-    }
-    .submit:hover{
-        background-color: $baseColour;
-        color: $primaryBackground;
-        border: 2px solid $primaryBackground;
-        box-shadow: -3px 3px $primaryHeading;
-        transform: translateX(-5px);
-    }
-}
+} 

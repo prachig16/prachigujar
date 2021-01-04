@@ -1,0 +1,355 @@
+
+// TO DO LATER: MAKE 320 AS BASE AND ADD MEDIA QUERY FOR 350 INSTEAD // CURRENT BASE IS ON 350PX-----------
+@media only Screen and (min-width: 320px) {
+
+    // HEADER-------------------------------
+    header .introContainer {
+        width: 305px;
+        padding: 50px 30px ;
+    }
+
+    // PROJECT SECTION------------------------
+    .projectLink a {
+        font-size: 1.5rem;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .project .projectInfo .projectLink a:first-of-type {
+        margin-right: 0px;
+    }
+
+     .project .projectImage {
+        top: -10%;
+    }
+
+    .projectFour .projectImage {
+        top: -10%;
+    } 
+
+    // CONTACT SECTION--------------------------
+    .socialNav li a {
+        padding: 3px;
+    }
+}
+
+@media only screen and (min-width: 376px){
+    
+    //PROJECT SECTION--------------------------- 
+    .project .projectImage{
+        top: -10%;
+    }
+    .projectFour .projectImage {
+        top: -15%;
+    }
+     
+    .project .projectInfo {
+        margin-top: 20%;
+    }
+
+    .project .projectInfo .projectLink a:first-of-type {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 440px) {
+
+    //PROJECT SECTION---------------------------
+    .project .projectImage {
+        top: -15%;
+    }
+
+    .project .projectInfo {
+        margin-top: 20%;
+        a {
+            margin: 10px 20px 0 0;
+        }
+    }
+
+    .socialNav li a {
+        padding: 10px;
+    }    
+}
+
+@media only screen and (min-width: 470px) {
+
+    //PROJECT SECTION---------------------------
+    .project .projectInfo {
+        margin-top: 20%;
+    }
+    .project .projectImage {
+        top: -15%;
+    }
+    .projectFour .projectImage {
+        top: -23%;
+    }      
+}
+
+@media only screen and (min-width: 500px){
+    
+    //PROJECT SECTION---------------------------
+    .project .projectImage {
+        top: -20%;
+    }
+    .projectFour .projectImage {
+        top: -27%;
+    }      
+}
+
+@media only screen and (min-width: 625px){
+    
+    //PROJECT SECTION---------------------------
+    .project .projectImage {
+        top: -25%;
+    }
+    
+    .projectFour .projectImage {
+        top: -30%;
+    }      
+}
+
+@media only screen and (min-width: 700px){
+
+    //PROJECT SECTION---------------------------
+    .project .projectImage {
+        top: -28%;
+    }
+
+    .projectFour .projectImage {
+        top: -35%;
+    }      
+}
+
+@media only screen and (min-width: 768px){
+    
+    // TYPOGRAPHY------------------------
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3,
+    h4 {
+        font-size: 3rem;
+    }
+
+    p,
+    a {
+        font-size: 2rem;
+    }
+
+    .skillsList .skillTitle {
+        font-size: 5rem;
+        p {
+            font-size: 1.75rem;
+        }
+    }
+
+    // SKILLS SECTION-----------------------
+     .skillsList {
+        padding: 30px;
+        .skillTitle {
+            width: calc((100% - 20px) / 3);
+        }  
+    } 
+    
+    // PROJECT SECTION----------------------
+    .projectsContainer .projectsList {
+        margin-top: 25%;
+    }
+    
+    .project {
+        margin: 10% 10% 20%;
+        &:last-of-type  {
+            margin: 10% 10% 0;
+        }
+        .projectImage {
+            padding: 20px 50px;
+        }
+    } 
+    .project .projectImage {
+        top: -20%;
+    }
+    .projectFour .projectImage {
+        top: -25%;
+    } 
+}
+
+@media only screen and (min-width: 900px){
+
+    .project .projectImage {
+        top: -23%;
+    }
+    
+    .projectFour .projectImage {
+        top: -30%;
+    }      
+}
+
+@media only screen and (min-width: 992px){
+
+    // TYPOGRAPHY--------------------------
+     h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.8rem;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+    }
+
+    h4 {
+        font-size: 3.5rem;
+    }
+
+    // ABOUT SECTION---------------------
+    .infoContainer {
+        flex-wrap: nowrap;
+        figure {
+            width: calc((100% - 20px) / 4);
+        }
+        .aboutMe {
+            margin: 0 0 0 30px;
+            width: calc((100% - 30px) / 2);
+        }
+    }
+
+    // SKILLS SECTION-----------------------
+    .skillsContainer {
+        padding-top: 5rem;
+    }
+    .skillsList .skillTitle {
+        width: calc((100% - 20px) / 4);
+    }
+    
+    // PROJECT SECTION----------------------
+    .projectsContainer .projectsList {
+        margin-top: 0;
+    }
+   
+     .project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b";
+    }
+    
+    .project,
+    .project:last-of-type {
+        margin: 50px auto;
+        .projectImage {
+            position: static;
+            grid-row: 1;
+            grid-column: 1;
+            grid-area: a;
+            justify-self: center;
+            align-self: center;
+            padding: 0 10px;
+        }
+        .projectInfo,
+        .projectInfo:last-of-type {
+            margin-top: 0;
+            padding: 20px 20px 20px 50px;
+        }
+    }  
+
+    .project:last-of-type {
+        margin-bottom: 0;
+        .projectImage {
+            grid-row: 1;
+            grid-column: 2;
+            grid-area: b;
+        }
+    }
+
+    .projectsContainer {
+        padding-top: 5rem;
+    }
+
+    .projectTwo .projectImage {
+        grid-row: 1;
+        grid-column: 2;
+        grid-area: b;
+    }
+
+    // CONTACT SECTION-------------------------
+    .contactContainer {
+        padding-top: 5rem;
+        margin: 0;
+    }
+    .contactFormContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        align-items: center;
+        .contactInfo p{
+            padding: 10px 50px;
+        } 
+    }
+
+    input[type="text"] {
+        margin: 0;
+        margin-right: 20px;
+        width: calc(50% - 20px);
+    }
+
+    input[type="email"] {
+        margin: 0;
+        margin-left: 20px;
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    // TYPOGRAPHY------------------------------
+    a:hover {
+        color: $primaryBackground;
+        background-color: $primaryHeading;
+        border-radius: 5px;
+    }
+
+    .socialNav li a:hover {
+        color: $primaryBackground;
+        background-color: $baseColour;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    .borderBottom:hover {
+        width: 250px;
+    }
+
+    .skillTitle:hover,
+    .project .projectInfo a:hover,
+    .submit:hover {
+        color: $baseColour;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    .project .projectInfo a.anchorBaseColour:hover,
+    .contactInfo a.anchorBaseColour:hover {
+        transform: none;
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    .submit:hover {
+        background-color: $baseColour;
+        color: $primaryBackground;
+        border: 2px solid $primaryBackground;
+        box-shadow: -3px 3px $primaryHeading;
+        transform: translateX(-5px);
+    }
+    
+    //PROJECT SECTION---------------------------
+    .project:last-of-type {
+        margin-bottom: 0;
+    }
+}

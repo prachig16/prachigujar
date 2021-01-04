@@ -1,7 +1,9 @@
 //Animation
+.typed-cursor{
+    color: $baseColour;
+}
 
-
-// Animation for the scroll down:
+// Animation for the scroll down from the header------------------
 .scrollDown::before{
     animation: scroll 1.5s infinite;
 }
@@ -15,7 +17,7 @@
     }
 }
 
-// Animation for the scroll top....
+// Animation to scroll to the top-------------------------------
 
 .scrollUp{
     animation: goTop 2s linear infinite;
@@ -30,20 +32,5 @@
     50%{
         transform: translateY(-20px);
         opacity: 1;
-    }
-}
-
-// Media Query for heading animation...
-@media only screen and (min-width: 768px) {
-    @keyframes animatedHeading{
-        from{width: 0;}
-        to{width: 273px;}
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    @keyframes animatedHeading{
-        from{width: 0;}
-        to{width: 311px;}
     }
 }
