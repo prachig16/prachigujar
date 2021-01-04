@@ -148,6 +148,14 @@
         }
     }
 
+    // HEADER SECTION-----------------------
+     header {
+        background-attachment: fixed;
+        .introContainer{
+            width: 435px;
+        }
+    }
+
     // SKILLS SECTION-----------------------
      .skillsList {
         padding: 30px;
@@ -206,6 +214,11 @@
 
     h4 {
         font-size: 3.5rem;
+    }
+
+    // HEADER SECTION--------------------
+     header .introContainer{
+        width: 595px;
     }
 
     // ABOUT SECTION---------------------
@@ -346,6 +359,11 @@
         border: 2px solid $primaryBackground;
         box-shadow: -3px 3px $primaryHeading;
         transform: translateX(-5px);
+    }
+
+    // HEADER SECTION-------------------------
+    header .introContainer{
+        padding: 50px 100px;
     }
     
     //PROJECT SECTION---------------------------

@@ -27,25 +27,3 @@ header{
         width: 345px;
     }
 }
-
-@media only screen and (min-width: 768px) {
-    header {
-        background-attachment: fixed;
-        .introContainer{
-            width: 435px;
-        }
-    }
-    
-}
-
-@media only screen and (min-width: 992px) {
-    header .introContainer{
-        width: 595px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    header .introContainer{
-        padding: 50px 100px;
-    }
-}

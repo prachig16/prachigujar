@@ -570,27 +570,6 @@ header .introContainer {
   width: 345px;
 }
 
-@media only screen and (min-width: 768px) {
-  header {
-    background-attachment: fixed;
-  }
-  header .introContainer {
-    width: 435px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  header .introContainer {
-    width: 595px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  header .introContainer {
-    padding: 50px 100px;
-  }
-}
-
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1127,6 +1106,12 @@ footer i {
   .skillsList .skillTitle p {
     font-size: 1.75rem;
   }
+  header {
+    background-attachment: fixed;
+  }
+  header .introContainer {
+    width: 435px;
+  }
   .skillsList {
     padding: 30px;
   }
@@ -1174,6 +1159,9 @@ footer i {
   }
   h4 {
     font-size: 3.5rem;
+  }
+  header .introContainer {
+    width: 595px;
   }
   .infoContainer {
     -ms-flex-wrap: nowrap;
@@ -1324,6 +1312,9 @@ footer i {
             box-shadow: -3px 3px #480e1d;
     -webkit-transform: translateX(-5px);
             transform: translateX(-5px);
+  }
+  header .introContainer {
+    padding: 50px 100px;
   }
   .project:last-of-type {
     margin-bottom: 0;
