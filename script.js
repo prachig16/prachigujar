@@ -44,4 +44,24 @@ $(document).ready(function() {
     }, 500);
     })
 
+    // FUTURE: Try to get a function to change the sticky nav back to opaque when scrolled up
+    
+    // // Adding scroll function to change the background of sticky nav to have an opaque color when page scrolled up
+
+    // const scroll = $(window).scrollTop()
+    // $(window).scroll(function(){
+    //     const top = $('.top');
+    //     const wh = $(window).height() - 100;
+
+    //     if (scroll > $('header').offset().top - wh){
+    //         console.log('scrolled');
+    //         top.css({
+    //             'background-color': 'rgba(249, 245, 240, 1)'
+    //         })
+    //     }else{
+    //         top.css({
+    //             'background-color': 'rgba(249, 245, 240, 0.6)'
+    //         })
+    //     }
+    // });
 });

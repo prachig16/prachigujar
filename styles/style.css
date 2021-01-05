@@ -270,13 +270,13 @@ h4 {
   margin: 0 auto;
 }
 
-h2 {
+h3 {
   font-size: 3rem;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
 }
 
-h3 {
+h2 {
   font-size: 2.2rem;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -327,7 +327,7 @@ a:active {
   margin: 20px 0;
 }
 
-.headingContent h2 {
+.headingContent h3 {
   text-shadow: 16px 11px 3px rgba(44, 45, 48, 0.3);
   letter-spacing: 0.2rem;
   font-weight: 500;
@@ -534,7 +534,7 @@ body {
 
 header {
   min-height: 100vh;
-  background-image: url("https://i.ibb.co/0F2pk4v/IMG-0448.jpg");
+  background-image: url("https://i.ibb.co/PM9ZQ2H/IMG-optim.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -581,7 +581,7 @@ header .introContainer {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 15px;
-  background-color: rgba(249, 245, 240, 0.6);
+  background-color: #f9f5f0;
   -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -1089,10 +1089,10 @@ footer i {
   h1 {
     font-size: 4rem;
   }
-  h2 {
+  h3 {
     font-size: 3.5rem;
   }
-  h3,
+  h2,
   h4 {
     font-size: 3rem;
   }
@@ -1151,10 +1151,10 @@ footer i {
   h1 {
     font-size: 4rem;
   }
-  h2 {
+  h3 {
     font-size: 3.8rem;
   }
-  h3 {
+  h2 {
     font-size: 3.5rem;
   }
   h4 {
