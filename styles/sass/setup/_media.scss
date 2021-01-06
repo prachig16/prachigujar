@@ -4,7 +4,7 @@
 
     // HEADER-------------------------------
     header .introContainer {
-        width: 305px;
+        // width: 305px;
         padding: 50px 30px ;
     }
 
@@ -124,6 +124,10 @@
     
     // TYPOGRAPHY------------------------
     h1 {
+        font-size: 6rem;
+    }
+    
+    h2{
         font-size: 4rem;
     }
 
@@ -131,7 +135,6 @@
         font-size: 3.5rem;
     }
 
-    h2,
     h4 {
         font-size: 3rem;
     }
@@ -151,9 +154,9 @@
     // HEADER SECTION-----------------------
      header {
         background-attachment: fixed;
-        .introContainer{
-            width: 435px;
-        }
+        // .introContainer{
+        //     // width: 435px;
+        // }
     }
 
     // SKILLS SECTION-----------------------
@@ -197,19 +200,21 @@
     }      
 }
 
+
+// MIN WIDTH: 992PX--------------------------
 @media only screen and (min-width: 992px){
 
     // TYPOGRAPHY--------------------------
      h1 {
-        font-size: 4rem;
+        font-size: 9rem;
+    }
+    
+    h2 {
+        font-size: 5rem;
     }
 
     h3 {
         font-size: 3.8rem;
-    }
-
-    h2 {
-        font-size: 3.5rem;
     }
 
     h4 {
@@ -217,9 +222,9 @@
     }
 
     // HEADER SECTION--------------------
-     header .introContainer{
-        width: 595px;
-    }
+    //  header .introContainer{
+    //     width: 595px;
+    // }
 
     // ABOUT SECTION---------------------
     .infoContainer {

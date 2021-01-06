@@ -270,6 +270,11 @@ h4 {
   margin: 0 auto;
 }
 
+h1,
+h2 {
+  color: #3c3a3a;
+}
+
 h3 {
   font-size: 3rem;
   font-weight: 700;
@@ -278,9 +283,6 @@ h3 {
 
 h2 {
   font-size: 2.2rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 h4 {
@@ -534,7 +536,7 @@ body {
 
 header {
   min-height: 100vh;
-  background-image: url("https://i.ibb.co/PM9ZQ2H/IMG-optim.jpg");
+  background-image: url(https://i.ibb.co/BfHbhfb/mona-magnussen.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -562,12 +564,9 @@ header .introContainer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: rgba(249, 245, 240, 0.6);
   border-radius: 20px;
-  -webkit-box-shadow: 0 0 5px #480e1d;
-          box-shadow: 0 0 5px #480e1d;
   padding: 50px;
-  width: 345px;
+  width: 100%;
 }
 
 .top {
@@ -994,7 +993,6 @@ footer i {
 
 @media only Screen and (min-width: 320px) {
   header .introContainer {
-    width: 305px;
     padding: 50px 30px;
   }
   .projectLink a {
@@ -1087,12 +1085,14 @@ footer i {
 
 @media only screen and (min-width: 768px) {
   h1 {
+    font-size: 6rem;
+  }
+  h2 {
     font-size: 4rem;
   }
   h3 {
     font-size: 3.5rem;
   }
-  h2,
   h4 {
     font-size: 3rem;
   }
@@ -1108,9 +1108,6 @@ footer i {
   }
   header {
     background-attachment: fixed;
-  }
-  header .introContainer {
-    width: 435px;
   }
   .skillsList {
     padding: 30px;
@@ -1149,19 +1146,16 @@ footer i {
 
 @media only screen and (min-width: 992px) {
   h1 {
-    font-size: 4rem;
+    font-size: 9rem;
+  }
+  h2 {
+    font-size: 5rem;
   }
   h3 {
     font-size: 3.8rem;
   }
-  h2 {
-    font-size: 3.5rem;
-  }
   h4 {
     font-size: 3.5rem;
-  }
-  header .introContainer {
-    width: 595px;
   }
   .infoContainer {
     -ms-flex-wrap: nowrap;

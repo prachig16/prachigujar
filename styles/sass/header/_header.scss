@@ -3,7 +3,9 @@ body{
 }
 header{
     min-height: 100vh;
-    background-image: url("https://i.ibb.co/PM9ZQ2H/IMG-optim.jpg");
+    // background-image: url("https://i.ibb.co/PM9ZQ2H/IMG-optim.jpg");
+    background-image: url(https://i.ibb.co/BfHbhfb/mona-magnussen.jpg);
+    // Image cr: Mona Magnusses (unsplash)
     background-size: cover;
     background-position: center;
     position: relative;
@@ -20,10 +22,11 @@ header{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: $secondaryBackground;
+        // background-color: $secondaryBackground;
         border-radius: 20px;
-        box-shadow: 0 0 5px $primaryHeading;
+        // box-shadow: 0 0 5px $primaryHeading;
         padding: 50px;
-        width: 345px;
+        // width: 345px;
+        width: 100%;
     }
 }

@@ -16,6 +16,11 @@ h4{
     margin: 0 auto;
 }
 
+h1, 
+h2{
+    color: $topHeading;
+}
+
 h3 {
     font-size: 3rem;
     font-weight: 700;
@@ -24,7 +29,6 @@ h3 {
 
 h2 {
     font-size: 2.2rem;
-    width: max-content;
 }
 
 h4{
