@@ -727,9 +727,7 @@ header .introContainer {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .scrollUp a {
@@ -846,10 +844,6 @@ main .aboutContainer {
   overflow-x: hidden;
   padding: 30px 0;
   margin: 0 0 5% 0;
-}
-
-.project:last-of-type {
-  margin: 0 0 10% 0;
 }
 
 .project .projectImage {
@@ -1012,6 +1006,9 @@ footer i {
 }
 
 @media only screen and (min-width: 440px) {
+  .project .projectInfo {
+    padding: 20px 30px;
+  }
   .project .projectInfo a {
     margin: 10px 20px 0 0;
   }
@@ -1077,6 +1074,11 @@ footer i {
   h4 {
     font-size: 3.5rem;
   }
+  .scrollUp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .infoContainer {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -1096,65 +1098,19 @@ footer i {
   }
   .projectsContainer .projectsList {
     margin-top: 0;
-  }
-  .project {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "a b";
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    grid-gap: 40px 20px;
   }
-  .project,
-  .project:last-of-type {
-    margin: 50px auto;
-  }
-  .project .projectImage,
-  .project:last-of-type .projectImage {
-    position: static;
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: a;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding: 0 10px;
-  }
-  .project .projectInfo,
-  .project .projectInfo:last-of-type,
-  .project:last-of-type .projectInfo,
-  .project:last-of-type .projectInfo:last-of-type {
-    margin-top: 0;
-    padding: 20px 20px 20px 50px;
-  }
-  .project:last-of-type {
-    margin-bottom: 0;
-  }
-  .project:last-of-type .projectImage {
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: b;
+  .projectsContainer .projectsList .project {
+    margin: 0;
   }
   .projectsContainer {
     padding-top: 5rem;
-  }
-  .projectTwo .projectImage {
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: b;
   }
   .contactContainer {
     padding-top: 5rem;
@@ -1246,8 +1202,5 @@ footer i {
   }
   header .introContainer {
     padding: 50px 100px;
-  }
-  .project:last-of-type {
-    margin-bottom: 0;
   }
 }

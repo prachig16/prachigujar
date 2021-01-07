@@ -63,6 +63,8 @@ $(document).ready(function() {
     }, 500);
     })
 
+
+    
     // FUTURE: Try to get a function to change the sticky nav back to opaque when scrolled up
     
     // // Adding scroll function to change the background of sticky nav to have an opaque color when page scrolled up
