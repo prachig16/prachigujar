@@ -845,7 +845,7 @@ main .aboutContainer {
           box-shadow: 0 0 5px #b4003c;
   overflow-x: hidden;
   padding: 30px 0;
-  margin: 0 0 2% 0;
+  margin: 0 0 5% 0;
 }
 
 .project:last-of-type {
@@ -853,12 +853,11 @@ main .aboutContainer {
 }
 
 .project .projectImage {
-  padding: 20px;
   margin: 0 auto;
 }
 
 .project .projectInfo {
-  padding: 20px 50px;
+  padding: 10px;
   text-align: left;
 }
 
@@ -990,9 +989,6 @@ footer i {
   header .introContainer {
     padding: 50px 30px;
   }
-  .project .projectInfo {
-    padding: 10px;
-  }
   .projectLink a {
     font-size: 1.5rem;
     display: inline-block;
@@ -1062,7 +1058,8 @@ footer i {
   .skillsList .skillTitle {
     width: calc((100% - 20px) / 3);
   }
-  .project .projectImage {
+  .project .projectImage,
+  .project .projectInfo {
     padding: 20px 50px;
   }
 }

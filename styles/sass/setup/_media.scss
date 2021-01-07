@@ -8,9 +8,6 @@
     }
 
     // PROJECT SECTION------------------------
-    .project .projectInfo{
-        padding: 10px;
-    }
     .projectLink a {
         font-size: 1.5rem;
         display: inline-block;
@@ -188,7 +185,9 @@
     // }
     
     .project {
-        .projectImage {
+
+        .projectImage ,
+        .projectInfo{
             padding: 20px 50px;
         }
     } 
