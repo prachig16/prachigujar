@@ -229,6 +229,7 @@ html {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 * {
@@ -569,6 +570,13 @@ header .introContainer {
   width: 100%;
 }
 
+.stickyNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,30 +587,26 @@ header .introContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 15px;
+  position: relative;
+  padding: 10px 20px;
   background-color: #f9f5f0;
   -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .top .logo {
-  width: 5%;
+  width: 15%;
   margin: 0;
 }
 
 .topNav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.topNav {
   padding: 10px;
 }
 
@@ -615,7 +619,6 @@ header .introContainer {
   border-left: 2px solid transparent;
   border-bottom: 2px solid transparent;
   padding: 5px 10px;
-  margin: 0px 5px;
 }
 
 .topNav li a:hover, .topNav li a:active, .topNav li a:focus {
@@ -627,35 +630,30 @@ header .introContainer {
           box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.stickyNav {
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  right: 0;
-  left: 0;
-}
-
-.slidingMenuToggle {
-  padding-top: 20px;
-}
-
-.slidingMenuToggle .slidingMenu {
-  background-color: rgba(103, 52, 94, 0.6);
+.slidingMenu {
+  background-color: rgba(103, 52, 94, 0.8);
   overflow: hidden;
   position: fixed;
   right: 0;
   top: -100%;
   z-index: 2;
-  -webkit-transition: all 0.7s linear;
-  transition: all 0.7s linear;
-  height: auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100vh;
   width: 100%;
 }
 
-.slidingMenuToggle .slidingMenu li {
+.slidingMenu li {
   list-style: none;
   text-align: center;
 }
@@ -665,6 +663,8 @@ header .introContainer {
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
   color: #f9f5f0;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
   padding: 20px;
   width: 100%;
 }
@@ -674,13 +674,25 @@ header .introContainer {
   border-bottom: 1px solid #480e1d;
 }
 
-.hamburger {
-  position: fixed;
-  z-index: 1;
+.slideDown {
+  top: 0%;
+}
+
+.hamburger,
+.hamburgerClose {
+  z-index: 3;
   color: #b4003c;
   font-size: 3rem;
-  top: 20px;
+  position: absolute;
+  top: 50%;
   right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hamburgerClose {
+  display: none;
+  color: #f9f5f0;
 }
 
 .scrollDown,
@@ -695,10 +707,10 @@ header .introContainer {
   height: 70px;
   margin-left: -20px;
   margin-top: -35px;
-  -webkit-box-shadow: inset 0 0 6px 2px #b4003c;
-          box-shadow: inset 0 0 6px 2px #b4003c;
+  -webkit-box-shadow: inset 0 0 1px 2px #b4003c;
+          box-shadow: inset 0 0 1px 2px #b4003c;
   border-radius: 25px;
-  border: 2px solid #b4003c;
+  border: 1px solid #b4003c;
 }
 
 .scrollDown::before {
@@ -713,7 +725,7 @@ header .introContainer {
 
 .scrollUp {
   position: fixed;
-  right: 30px;
+  right: 50px;
   bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -731,18 +743,6 @@ header .introContainer {
 .scrollUp a i {
   font-size: 3.5rem;
   color: #480e1d;
-}
-
-@media only screen and (min-width: 1024px) {
-  .stickyNav {
-    display: inline-block;
-  }
-  .slidingMenuToggle {
-    display: none;
-  }
-  .scrollUp a:hover {
-    background-color: transparent;
-  }
 }
 
 main {
@@ -768,6 +768,7 @@ main .aboutContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
   padding: 20px 0;
 }
 
@@ -789,7 +790,7 @@ main .aboutContainer {
 }
 
 .skillsContainer {
-  padding: 1rem 0 5rem;
+  padding: 4rem 0 5rem;
   margin-bottom: 20px;
 }
 
@@ -806,6 +807,7 @@ main .aboutContainer {
   border-radius: 50px;
   -webkit-box-shadow: 0 0 5px #b4003c;
           box-shadow: 0 0 5px #b4003c;
+  overflow-x: hidden;
   padding: 30px 0;
   margin-top: 50px;
 }
@@ -836,18 +838,14 @@ main .aboutContainer {
   margin-bottom: 20px;
 }
 
-.projectsContainer .projectsList {
-  margin-top: 30%;
-}
-
 .project {
   background-color: rgba(249, 245, 240, 0.6);
   border-radius: 50px;
   -webkit-box-shadow: 0 0 5px #b4003c;
           box-shadow: 0 0 5px #b4003c;
-  position: relative;
+  overflow-x: hidden;
   padding: 30px 0;
-  margin: 0 0 25% 0;
+  margin: 0 0 2% 0;
 }
 
 .project:last-of-type {
@@ -855,8 +853,6 @@ main .aboutContainer {
 }
 
 .project .projectImage {
-  position: absolute;
-  top: -10%;
   padding: 20px;
   margin: 0 auto;
 }
@@ -864,7 +860,6 @@ main .aboutContainer {
 .project .projectInfo {
   padding: 20px 50px;
   text-align: left;
-  margin: 25% auto 0;
 }
 
 .project .projectInfo p {
@@ -995,34 +990,25 @@ footer i {
   header .introContainer {
     padding: 50px 30px;
   }
+  .project .projectInfo {
+    padding: 10px;
+  }
   .projectLink a {
     font-size: 1.5rem;
     display: inline-block;
     margin: 0 auto;
-  }
-  .project .projectInfo .projectLink a:first-of-type {
-    margin-right: 0px;
-  }
-  .project .projectImage {
-    top: -10%;
-  }
-  .projectFour .projectImage {
-    top: -10%;
   }
   .socialNav li a {
     padding: 3px;
   }
 }
 
-@media only screen and (min-width: 376px) {
-  .project .projectImage {
-    top: -10%;
+@media only screen and (min-width: 375px) {
+  h1 {
+    font-size: 3.5rem;
   }
-  .projectFour .projectImage {
-    top: -15%;
-  }
-  .project .projectInfo {
-    margin-top: 20%;
+  h2 {
+    font-size: 2.5rem;
   }
   .project .projectInfo .projectLink a:first-of-type {
     margin-right: 10px;
@@ -1030,56 +1016,11 @@ footer i {
 }
 
 @media only screen and (min-width: 440px) {
-  .project .projectImage {
-    top: -15%;
-  }
-  .project .projectInfo {
-    margin-top: 20%;
-  }
   .project .projectInfo a {
     margin: 10px 20px 0 0;
   }
   .socialNav li a {
     padding: 10px;
-  }
-}
-
-@media only screen and (min-width: 470px) {
-  .project .projectInfo {
-    margin-top: 20%;
-  }
-  .project .projectImage {
-    top: -15%;
-  }
-  .projectFour .projectImage {
-    top: -23%;
-  }
-}
-
-@media only screen and (min-width: 500px) {
-  .project .projectImage {
-    top: -20%;
-  }
-  .projectFour .projectImage {
-    top: -27%;
-  }
-}
-
-@media only screen and (min-width: 625px) {
-  .project .projectImage {
-    top: -25%;
-  }
-  .projectFour .projectImage {
-    top: -30%;
-  }
-}
-
-@media only screen and (min-width: 700px) {
-  .project .projectImage {
-    top: -28%;
-  }
-  .projectFour .projectImage {
-    top: -35%;
   }
 }
 
@@ -1109,38 +1050,20 @@ footer i {
   header {
     background-attachment: fixed;
   }
+  header .top .logo {
+    width: 10%;
+  }
+  .skillsContainer {
+    padding: 5rem 0;
+  }
   .skillsList {
     padding: 30px;
   }
   .skillsList .skillTitle {
     width: calc((100% - 20px) / 3);
   }
-  .projectsContainer .projectsList {
-    margin-top: 25%;
-  }
-  .project {
-    margin: 10% 10% 20%;
-  }
-  .project:last-of-type {
-    margin: 10% 10% 0;
-  }
   .project .projectImage {
     padding: 20px 50px;
-  }
-  .project .projectImage {
-    top: -20%;
-  }
-  .projectFour .projectImage {
-    top: -25%;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .project .projectImage {
-    top: -23%;
-  }
-  .projectFour .projectImage {
-    top: -30%;
   }
 }
 
@@ -1262,6 +1185,23 @@ footer i {
     margin: 0;
     margin-left: 20px;
     width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header .top .logo {
+    width: 5%;
+  }
+  .topNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .slidingMenuToggle {
+    display: none;
+  }
+  .scrollUp a:hover {
+    background-color: transparent;
   }
 }
 

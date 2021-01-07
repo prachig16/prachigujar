@@ -1,24 +1,30 @@
 // TOP NAV will be available only for larger screen
 
+.stickyNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
 .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    position: relative;
+    padding: 10px 20px;
     background-color: $primaryBackground;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
     .logo{
-        width: 5%;
+        width: 15%;
         margin: 0;
     }
 }
-.topNav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .topNav{
+    display: none;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     li a{
         color: $primaryHeading;
@@ -29,7 +35,6 @@
         border-left: 2px solid transparent;
         border-bottom: 2px solid transparent;
         padding: 5px 10px;
-        margin: 0px 5px; 
         &:hover,
         &:active,
         &:focus{
@@ -42,35 +47,27 @@
     }
 }
 
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.stickyNav {
-    display: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    right: 0;
-    left: 0;
-}
+
 
 // SLIDING menu for tablet and mobile version
 
-.slidingMenuToggle{
-    padding-top: 20px;
-    .slidingMenu {
-        background-color: $tertiaryBackground;
-        overflow: hidden;
-        position: fixed;
-        right: 0;
-        top: -100%;
-        z-index: 2;
-        transition: all 0.7s linear;
-        height: auto;
-        width: 100%;
-        li{
-            list-style: none;
-            text-align: center;
-        }
+
+.slidingMenu {
+    background-color: $tertiaryBackground;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: -100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+    li{
+        list-style: none;
+        text-align: center;
     }
 }
 
@@ -78,6 +75,8 @@
     display: inline-block;
     transition: color 0.2s ease;
     color: $primaryBackground;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
     padding: 20px;
     width: 100%;
     &:focus,
@@ -87,16 +86,29 @@
     }
 }
  
-
-.hamburger{
-    position: fixed;
-    z-index: 1;
-    color: $baseColour;
-    font-size: 3rem;
-    top: 20px;
-    right: 20px;
+// To be added in JS when clicked on "hamburger" or "Sliding Menu" to slide the menu up. 
+.slideDown{
+    top: 0%;
 }
 
+.hamburger,
+.hamburgerClose{
+    z-index: 3;
+    color: $baseColour;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.hamburgerClose{
+    display: none;
+    color: $primaryBackground;
+}
+
+
+// SCROLL DOWN feature
 .scrollDown,
 .scrollDown::before{
     position: absolute;
@@ -109,9 +121,9 @@
     height: 70px;
     margin-left: -20px;
     margin-top: -35px;
-    box-shadow: inset 0 0 6px 2px $baseColour;
+    box-shadow: inset 0 0 1px 2px $baseColour;
     border-radius: 25px;
-    border: 2px solid $baseColour;
+    border: 1px solid $baseColour;
 }
 
 .scrollDown::before{
@@ -125,10 +137,10 @@
 }
 
 
-// Go to TOP button style...
+// SCROLL UP feature
 .scrollUp{
     position: fixed;
-    right: 30px;
+    right: 50px;
     bottom: 30px;
     display: flex;
     a{
@@ -141,21 +153,5 @@
             font-size: 3.5rem;
             color: $primaryHeading;
         }
-    }
-    
+    }   
 }
-
-@media only screen and (min-width: 1024px){
-    .stickyNav{
-        display: inline-block;
-    }
-
-    .slidingMenuToggle{
-        display: none;
-    }
-
-    .scrollUp a:hover{
-        background-color: transparent;
-    }
-}
-

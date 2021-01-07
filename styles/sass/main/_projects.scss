@@ -2,9 +2,9 @@
 
 .projectsContainer {
     margin-bottom: 20px;
-    .projectsList{
-        margin-top: 30%;
-    }
+    // .projectsList{
+    //     margin-top: 30%;
+    // }
     
 }    
 
@@ -12,22 +12,23 @@
     background-color: $secondaryBackground;
     border-radius: 50px;
     box-shadow: 0 0 5px $baseColour;
-    position: relative;
+    // position: relative;
+    overflow-x: hidden;
     padding: 30px 0;
-    margin: 0 0 25% 0;
+    margin: 0 0 2% 0;
     &:last-of-type{
         margin: 0 0 10% 0;
     }
     .projectImage{
-        position: absolute;
-        top: -10%;
+        // position: absolute;
+        // top: -10%;
         padding: 20px;
         margin: 0 auto;
     }
     .projectInfo{
         padding: 20px 50px;
         text-align: left;
-        margin: 25% auto 0;
+        // margin: 25% auto 0;
         p{
             text-align: left;
             padding: 10px 0;

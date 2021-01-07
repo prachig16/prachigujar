@@ -42,26 +42,43 @@
 
 </head>
 <body>
-    <header>
+    <header id="home">
         <section class="topContainer wrapper">
             
-            <nav class="stickyNav">
+            <div class="stickyNav">
                 <div class="top">
                     <figure class="logo">
                         <img src="./assets/logo.png" alt="">
                     </figure>
-                    <ul class="topNav">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+
+                    <!-- Traditional in line Nav for larger screens -->
+                    <nav>
+                        <ul class="topNav">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Sliding Menu for mobile screen -->
+                    <nav class="slidingMenuToggle">
+                        <i class="fa fa-bars hamburger"></i>
+                        <i class="fas fa-times hamburgerClose"></i>
+                        <ul class="slidingMenu">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </nav>
+            </div>
             
 
             <!-- Sliding nav for Mobile version -->
-            <nav class="slidingMenuToggle">
+            <!-- <nav class="slidingMenuToggle">
                 <i class="fa fa-bars hamburger"></i>
                 <ul class="slidingMenu">
                     <li><a href="#about">About</a></li>
@@ -69,7 +86,8 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </nav> -->
+            
         </section>
     
         <section class="introContainer wrapper">

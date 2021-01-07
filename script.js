@@ -18,21 +18,40 @@ $(document).ready(function() {
         disable: window.innerWidth < 768
     });
 
-    // declaring a function to change top positiong for the sliding menu in mobile
-    const slidingBar = function (slideTop) {
-        $('.slidingMenu').css({
-            'top': slideTop
-        })
-    }    
+   
+    // toggle class to slide up the menu when an option is selected or clicked on the hamburger menu
+    // When clicked on hamburger icon, close icon will be displayed and vice versa
+    // when clicked on any menu items on the sliding menu same effect will be achieved
 
-    // calling the sliding bar function when clicked on the icon to slide down
     $('.hamburger').on('click', function(){
-        slidingBar(0);
+        $('.slidingMenu').toggleClass('slideDown');
+        $('.hamburger').css({
+            'display': 'none'
+        })
+        $('.hamburgerClose').css({
+            'display': 'inherit'
+        })
     })
 
-    // calling the sliding bar function to slide up the menu when an option is selected
+    $('.hamburgerClose').on('click', function () {
+        $('.slidingMenu').toggleClass('slideDown');
+        $('.hamburger').css({
+            'display': 'inherit'
+        })
+        $('.hamburgerClose').css({
+            'display': 'none'
+        })
+    })
+
+
     $('.slidingMenu').on('click', function(){
-        slidingBar('-100%')
+        $('.slidingMenu').toggleClass('slideDown');
+        $('.hamburger').css({
+            'display': 'inherit'
+        })
+        $('.hamburgerClose').css({
+            'display': 'none'
+        })
     })
 
 

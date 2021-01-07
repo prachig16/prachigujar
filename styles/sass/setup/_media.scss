@@ -4,28 +4,30 @@
 
     // HEADER-------------------------------
     header .introContainer {
-        // width: 305px;
         padding: 50px 30px ;
     }
 
     // PROJECT SECTION------------------------
+    .project .projectInfo{
+        padding: 10px;
+    }
     .projectLink a {
         font-size: 1.5rem;
         display: inline-block;
         margin: 0 auto;
     }
 
-    .project .projectInfo .projectLink a:first-of-type {
-        margin-right: 0px;
-    }
+    // .project .projectInfo .projectLink a:first-of-type {
+    //     margin-right: 0px;
+    // }
 
-     .project .projectImage {
-        top: -10%;
-    }
+    //  .project .projectImage {
+    //     top: -10%;
+    // }
 
-    .projectFour .projectImage {
-        top: -10%;
-    } 
+    // .projectFour .projectImage {
+    //     top: -10%;
+    // } 
 
     // CONTACT SECTION--------------------------
     .socialNav li a {
@@ -33,19 +35,26 @@
     }
 }
 
-@media only screen and (min-width: 376px){
+@media only screen and (min-width: 375px){
+     // TYPOGRAPHY------------------------
+    h1 {
+        font-size: 3.5rem;
+    }
     
+    h2{
+        font-size: 2.5rem;
+    }
     //PROJECT SECTION--------------------------- 
-    .project .projectImage{
-        top: -10%;
-    }
-    .projectFour .projectImage {
-        top: -15%;
-    }
+    // .project .projectImage{
+    //     top: -10%;
+    // }
+    // .projectFour .projectImage {
+    //     top: -15%;
+    // }
      
-    .project .projectInfo {
-        margin-top: 20%;
-    }
+    // .project .projectInfo {
+    //     margin-top: 20%;
+    // }
 
     .project .projectInfo .projectLink a:first-of-type {
         margin-right: 10px;
@@ -55,12 +64,12 @@
 @media only screen and (min-width: 440px) {
 
     //PROJECT SECTION---------------------------
-    .project .projectImage {
-        top: -15%;
-    }
+    // .project .projectImage {
+    //     top: -15%;
+    // }
 
     .project .projectInfo {
-        margin-top: 20%;
+        // margin-top: 20%;
         a {
             margin: 10px 20px 0 0;
         }
@@ -71,54 +80,54 @@
     }    
 }
 
-@media only screen and (min-width: 470px) {
+// @media only screen and (min-width: 470px) {
 
-    //PROJECT SECTION---------------------------
-    .project .projectInfo {
-        margin-top: 20%;
-    }
-    .project .projectImage {
-        top: -15%;
-    }
-    .projectFour .projectImage {
-        top: -23%;
-    }      
-}
+//     //PROJECT SECTION---------------------------
+//     // .project .projectInfo {
+//     //     margin-top: 20%;
+//     // }
+//     // .project .projectImage {
+//     //     top: -15%;
+//     // }
+//     // .projectFour .projectImage {
+//     //     top: -23%;
+//     // }      
+// }
 
-@media only screen and (min-width: 500px){
+// @media only screen and (min-width: 500px){
     
-    //PROJECT SECTION---------------------------
-    .project .projectImage {
-        top: -20%;
-    }
-    .projectFour .projectImage {
-        top: -27%;
-    }      
-}
+//     //PROJECT SECTION---------------------------
+//     .project .projectImage {
+//         top: -20%;
+//     }
+//     .projectFour .projectImage {
+//         top: -27%;
+//     }      
+// }
 
-@media only screen and (min-width: 625px){
+// @media only screen and (min-width: 625px){
     
-    //PROJECT SECTION---------------------------
-    .project .projectImage {
-        top: -25%;
-    }
+//     //PROJECT SECTION---------------------------
+//     .project .projectImage {
+//         top: -25%;
+//     }
     
-    .projectFour .projectImage {
-        top: -30%;
-    }      
-}
+//     .projectFour .projectImage {
+//         top: -30%;
+//     }      
+// }
 
-@media only screen and (min-width: 700px){
+// @media only screen and (min-width: 700px){
 
-    //PROJECT SECTION---------------------------
-    .project .projectImage {
-        top: -28%;
-    }
+//     //PROJECT SECTION---------------------------
+//     .project .projectImage {
+//         top: -28%;
+//     }
 
-    .projectFour .projectImage {
-        top: -35%;
-    }      
-}
+//     .projectFour .projectImage {
+//         top: -35%;
+//     }      
+// }
 
 @media only screen and (min-width: 768px){
     
@@ -154,13 +163,19 @@
     // HEADER SECTION-----------------------
      header {
         background-attachment: fixed;
-        // .introContainer{
-        //     // width: 435px;
-        // }
+        .top{
+            .logo{
+                width: 10%;
+            }
+        }
     }
 
     // SKILLS SECTION-----------------------
-     .skillsList {
+    .skillsContainer{
+        padding: 5rem 0;
+    }
+
+    .skillsList {
         padding: 30px;
         .skillTitle {
             width: calc((100% - 20px) / 3);
@@ -168,37 +183,33 @@
     } 
     
     // PROJECT SECTION----------------------
-    .projectsContainer .projectsList {
-        margin-top: 25%;
-    }
+    // .projectsContainer .projectsList {
+    //     margin-top: 25%;
+    // }
     
     .project {
-        margin: 10% 10% 20%;
-        &:last-of-type  {
-            margin: 10% 10% 0;
-        }
         .projectImage {
             padding: 20px 50px;
         }
     } 
-    .project .projectImage {
-        top: -20%;
-    }
-    .projectFour .projectImage {
-        top: -25%;
-    } 
+    // .project .projectImage {
+    //     top: -20%;
+    // }
+    // .projectFour .projectImage {
+    //     top: -25%;
+    // } 
 }
 
-@media only screen and (min-width: 900px){
+// @media only screen and (min-width: 900px){
 
-    .project .projectImage {
-        top: -23%;
-    }
+//     .project .projectImage {
+//         top: -23%;
+//     }
     
-    .projectFour .projectImage {
-        top: -30%;
-    }      
-}
+//     .projectFour .projectImage {
+//         top: -30%;
+//     }      
+// }
 
 
 // MIN WIDTH: 992PX--------------------------
@@ -320,6 +331,27 @@
         margin: 0;
         margin-left: 20px;
         width: calc(50% - 20px);
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    
+    // HEADER SECTION------------------------
+    header .top .logo{
+        width: 5%;
+    }
+
+    .topNav{
+        display: flex;
+    }
+
+    .slidingMenuToggle{
+        display: none;
+    }
+
+    .scrollUp a:hover{
+        background-color: transparent;
     }
 }
 
