@@ -43,6 +43,8 @@
             border-left: 2px solid $primaryHeading;
             border-bottom: 2px solid $primaryHeading;
             box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+            transform: scale3d(2);
+            transition: 0.5s;
         }
     }
 }
