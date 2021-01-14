@@ -44,7 +44,7 @@
 </head>
 <body>
     <header id="home">
-        <section class="topContainer wrapper">
+        <div class="topContainer wrapper">
             
             <div class="stickyNav">
                 <div class="top">
@@ -76,34 +76,20 @@
                     </nav>
                 </div>
             </div>
-            
-
-            <!-- Sliding nav for Mobile version -->
-            <!-- <nav class="slidingMenuToggle">
-                <i class="fa fa-bars hamburger"></i>
-                <ul class="slidingMenu">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav> -->
-            
-        </section>
+        </div>
     
         <section class="introContainer wrapper">
-            <h1><span class="animationColour">H</span>ello, I'm Prachi</h1>
-
-            <!-- strings for typed animation -->
-            <div id="typed-strings" class="srOnly" style="display: none;">
-                <h2>Frontend Developer</h2>
-                <h2>Product Designer</h2>
-                <h2>Amateur Painter</h2>
-                <h2>Avid Traveller</h2>
-                <h2>Happy Bean</h2>
-            </div>
+            <h1><span class="animationColour">H</span>ello, I'm Prachi</h1>            
             <h2>
                 <span class="animationColour"><i class="fas fa-terminal icon" title="terminal" aria-hidden="true"></i></span>
+                <!-- strings for typed animation -->
+                <div id="typed-strings" class="srOnly" style="display: none;">
+                    <h2>Frontend Developer</h2>
+                    <h2>Product Designer</h2>
+                    <h2>Amateur Painter</h2>
+                    <h2>Avid Traveller</h2>
+                    <h2>Happy Bean</h2>
+                </div>
                 <span id="typed"></span>
             </h2>
         </section>
@@ -202,7 +188,7 @@
                     <div class="borderBottom"></div>
                 </div>
           
-                <section class="projectsList">
+                <div class="projectsList">
                     <!-- PROJECT 1: Secret Santa Selector -->
                     <div class="projectOne project aos-init aos-animate" data-aos="fade-left">
                         <figure class="projectImage">
@@ -326,7 +312,7 @@
                             </div> -->
                         </section>
                     </div>
-                </section>
+                </div>
             </section>
             
             <section class="contactContainer" id="contact">
