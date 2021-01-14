@@ -375,7 +375,7 @@ a:active {
   font-size: 1.4rem;
 }
 
-.project .projectInfo a,
+.project .projectLink a,
 .submit {
   text-transform: uppercase;
   color: #f9f5f0;
@@ -388,13 +388,12 @@ a:active {
   margin: 0;
 }
 
-.project .projectInfo a:active, .project .projectInfo a:focus,
+.project .projectLink a:active, .project .projectLink a:focus,
 .submit:active,
 .submit:focus {
   color: #b4003c;
 }
 
-.project .projectInfo a.anchorBaseColour,
 .contactInfo a.anchorBaseColour {
   background-color: transparent;
   color: #b4003c;
@@ -405,9 +404,7 @@ a:active {
   text-transform: none;
 }
 
-.project .projectInfo a.anchorBaseColour:focus, .project .projectInfo a.anchorBaseColour:active,
-.contactInfo a.anchorBaseColour:focus,
-.contactInfo a.anchorBaseColour:active {
+.contactInfo a.anchorBaseColour:focus, .contactInfo a.anchorBaseColour:active {
   -webkit-transform: none;
           transform: none;
   font-style: italic;
@@ -1004,7 +1001,7 @@ footer i {
   header .introContainer .animatedStrings {
     font-size: 2.5rem;
   }
-  .project .projectInfo .projectLink a:first-of-type {
+  .project .projectLink a:first-of-type {
     margin-right: 10px;
   }
 }
@@ -1013,8 +1010,8 @@ footer i {
   .project .projectInfo {
     padding: 20px 30px;
   }
-  .project .projectInfo a {
-    margin: 10px 20px 0 0;
+  .project .projectLink a {
+    margin-right: 20px;
   }
   .socialNav li a {
     padding: 10px;
@@ -1060,7 +1057,8 @@ footer i {
     width: calc((100% - 20px) / 3);
   }
   .project .projectImage,
-  .project .projectInfo {
+  .project .projectInfo,
+  .project .projectLink {
     padding: 20px 50px;
   }
 }
@@ -1112,6 +1110,13 @@ footer i {
   }
   .projectsContainer .projectsList .project {
     margin: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0fr 1fr auto;
+        grid-template-rows: 0fr 1fr auto;
+  }
+  .projectsContainer .projectsList .project .projectInfo {
+    padding: 0 50px;
   }
   .projectsContainer {
     padding-top: 5rem;
@@ -1180,7 +1185,7 @@ footer i {
     width: 250px;
   }
   .skillTitle:hover,
-  .project .projectInfo a:hover,
+  .project .projectLink a:hover,
   .submit:hover {
     color: #b4003c;
     -webkit-transform: scale(1.1);
@@ -1188,7 +1193,6 @@ footer i {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .project .projectInfo a.anchorBaseColour:hover,
   .contactInfo a.anchorBaseColour:hover {
     -webkit-transform: none;
             transform: none;

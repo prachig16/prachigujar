@@ -30,7 +30,7 @@
         font-size: 2.5rem;
     }
 
-    .project .projectInfo .projectLink a:first-of-type {
+    .project .projectLink a:first-of-type {
         margin-right: 10px;
     }
 }
@@ -39,9 +39,10 @@
 
     .project .projectInfo {
         padding: 20px 30px;
-        a {
-            margin: 10px 20px 0 0;
-        }
+    }
+
+    .project .projectLink a{
+        margin-right: 20px;
     }
 
     .socialNav li a {
@@ -105,9 +106,9 @@
     } 
     
     .project {
-
         .projectImage ,
-        .projectInfo{
+        .projectInfo,
+        .projectLink{
             padding: 20px 50px;
         }
     } 
@@ -171,52 +172,17 @@
         grid-gap: 40px 20px;
         .project{
             margin: 0;
+            display: grid;
+            grid-template-rows: 0fr 1fr auto;
+            .projectInfo{
+                padding: 0 50px;
+            }
         }
     }
-   
-    //  .project {
-    //     display: grid;
-    //     grid-template-columns: 1fr 1fr;
-    //     grid-template-areas: "a b";
-    // }
-    
-    // .project,
-    // .project:last-of-type {
-    //     // // margin: 50px auto;
-    //     // .projectImage {
-    //     //     position: static;
-    //     //     grid-row: 1;
-    //     //     grid-column: 1;
-    //     //     grid-area: a;
-    //     //     justify-self: center;
-    //     //     align-self: center;
-    //     //     padding: 0 10px;
-    //     // }
-    //     // .projectInfo,
-    //     // .projectInfo:last-of-type {
-    //     //     margin-top: 0;
-    //     //     padding: 20px 20px 20px 50px;
-    //     // }
-    // }  
-
-    // .project:last-of-type {
-    //     margin-bottom: 0;
-    //     .projectImage {
-    //         grid-row: 1;
-    //         grid-column: 2;
-    //         grid-area: b;
-    //     }
-    // }
 
     .projectsContainer {
         padding-top: 5rem;
     }
-
-    // .projectTwo .projectImage {
-    //     grid-row: 1;
-    //     grid-column: 2;
-    //     grid-area: b;
-    // }
 
     // CONTACT SECTION-------------------------
     .contactContainer {
@@ -288,14 +254,13 @@
     }
 
     .skillTitle:hover,
-    .project .projectInfo a:hover,
+    .project .projectLink a:hover,
     .submit:hover {
         color: $baseColour;
         transform: scale(1.1);
         transition: 0.5s;
     }
 
-    .project .projectInfo a.anchorBaseColour:hover,
     .contactInfo a.anchorBaseColour:hover {
         transform: none;
         text-decoration: underline;
@@ -314,9 +279,4 @@
     header .introContainer{
         padding: 50px 100px;
     }
-    
-    // //PROJECT SECTION---------------------------
-    // .project:last-of-type {
-    //     margin-bottom: 0;
-    // }
 }
