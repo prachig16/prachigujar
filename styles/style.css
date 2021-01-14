@@ -837,6 +837,10 @@ main .aboutContainer {
   margin-bottom: 20px;
 }
 
+.projectsContainer .projectsList {
+  margin-top: 50px;
+}
+
 .project {
   background-color: rgba(249, 245, 240, 0.6);
   border-radius: 50px;
@@ -1007,7 +1011,8 @@ footer i {
 }
 
 @media only screen and (min-width: 440px) {
-  .project .projectInfo {
+  .project .projectInfo,
+  .project .projectLink {
     padding: 20px 30px;
   }
   .project .projectLink a {
@@ -1099,7 +1104,6 @@ footer i {
     width: calc((100% - 20px) / 4);
   }
   .projectsContainer .projectsList {
-    margin-top: 0;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
