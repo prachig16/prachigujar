@@ -4,8 +4,7 @@
 // HEADINGS-----------
 h1,
 h2,
-h3,
-h4{
+h3 {
     font-family: $headingFont;
     font-size: 2.5rem;
     font-weight: 500;
@@ -16,22 +15,27 @@ h4{
     margin: 0 auto;
 }
 
-h1, 
-h2{
+h1 {
     color: $topHeading;
 }
 
-h3 {
+header .introContainer .animatedStrings{
+    font-size: 2.2rem;
+    color: $topHeading;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+
+h2 {
     font-size: 3rem;
     font-weight: 700;
     font-family: $headingFont;
 }
 
-h2 {
-    font-size: 2.2rem;
-}
-
-h4{
+h3 {
     color: $baseColour;
     font-weight: 500;
     text-align: left;
@@ -73,7 +77,7 @@ a:active{
 .headingContent{
     text-align: center;
     margin: 20px 0;
-    h3{
+    h2{
         text-shadow: 16px 11px 3px rgba(44, 45, 48, 0.3);
         letter-spacing: 0.2rem;
         font-weight: 500;
